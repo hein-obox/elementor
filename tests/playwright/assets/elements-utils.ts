@@ -8,7 +8,7 @@
  * @return {Promise<*>} element id
  */
 export const addElement = async ( { model, container = null, isContainerASection = false } ) => {
-	let parent: any;
+	let parent: unknown;
 
 	if ( container ) {
 		parent = elementor.getContainer( container );

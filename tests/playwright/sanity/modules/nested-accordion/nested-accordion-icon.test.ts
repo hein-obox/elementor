@@ -6,7 +6,8 @@ test.describe( 'Nested Accordion Title Icon and Text No Overlap @nested-accordio
 	test.beforeAll( async ( { browser }, testInfo ) => {
 		const context = await browser.newContext();
 		const page = await context.newPage();
-		const wpAdmin = await new WpAdminPage( page, testInfo );
+		// eslint-disable-next-line @typescript-eslint/await-thenable
+		const wpAdmin = new WpAdminPage( page, testInfo );
 
 		await wpAdmin.setExperiments( {
 			container: 'active',

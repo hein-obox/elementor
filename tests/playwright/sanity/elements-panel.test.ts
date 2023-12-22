@@ -22,7 +22,6 @@ test( 'add widgets from the panel by click', async ( { page }, testInfo ) => {
 	const orderedWidgets = await editor.getPreviewFrame().evaluate( () => {
 		// Build a string that represents the widgets order in the page, since
 		// evaluate() must return a primitive value.
-		// @ts-ignore
 		return [ ...document.querySelectorAll( '.elementor-widget' ) ]
 			.map( ( el ) => {
 				return el.dataset.widget_type.replace( '.default', '' );

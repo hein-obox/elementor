@@ -19,6 +19,7 @@ module.exports = async ( config: FullConfig ) => {
 	const storageState = await page.context().storageState( { path: './storageState.json' } );
 
 	// Save the nonce and storage state in environment variables, to allow use them when creating the API context.
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
 	process.env.WP_REST_NONCE = await page.evaluate( () => window.wpApiSettings.nonce );
 	process.env.STORAGE_STATE = JSON.stringify( storageState );

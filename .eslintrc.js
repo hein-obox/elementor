@@ -43,6 +43,22 @@ module.exports = {
 			},
 		},
 	},
+	overrides: [
+		{
+			files: [ '*.ts', '*.tsx' ],
+			extends: [
+				'plugin:@typescript-eslint/recommended',
+				// 'plugin:@typescript-eslint/recommended-requiring-type-checking',
+			],
+			rules: {
+				'@typescript-eslint/await-thenable': 2,
+				'@typescript-eslint/no-var-requires': 0,
+			},
+			parserOptions: {
+				project: [ './tsconfig.json' ],
+			},
+		},
+	],
 	rules: {
 		// Custom canceled rules
 		'no-var': 'off',
@@ -57,7 +73,11 @@ module.exports = {
 		'no-mixed-operators': 'error',
 		'no-nested-ternary': 'error',
 		'no-cond-assign': 'error',
-		indent: [ 1, 'tab', { SwitchCase: 1 } ],
+		indent: [ 1, 'tab',
+			{
+				SwitchCase: 1,
+				ignoredNodes: [ 'JSXElement', 'JSXElement > *' ],
+			} ],
 		'padded-blocks': [ 'error', 'never' ],
 		'one-var-declaration-per-line': 'error',
 		'array-bracket-spacing': [ 'error', 'always' ],

@@ -103,7 +103,7 @@ export default class EditorPage extends BasePage {
 	 *
 	 * @return {Promise<*>} Element ID
 	 */
-	async addElement( model: any, container = null, isContainerASection = false ) {
+	async addElement( model: unknown, container = null, isContainerASection = false ) {
 		return await this.page.evaluate( addElement, { model, container, isContainerASection } );
 	}
 
@@ -537,7 +537,7 @@ export default class EditorPage extends BasePage {
 	 */
 	async editCurrentPage() {
 		const postId = await this.getPageIdFromFrontEnd();
-		await expect( postId, 'No Post/Page ID returned when calling getPageIdFromFrontEnd().' ).toBeTruthy();
+		expect( postId, 'No Post/Page ID returned when calling getPageIdFromFrontEnd().' ).toBeTruthy();
 		await this.gotoPostId( postId );
 	}
 
@@ -571,7 +571,7 @@ export default class EditorPage extends BasePage {
 	 *
 	 * @return {Promise<void>}
 	 */
-	async applyElementSettings( elementId: string, settings: any ) {
+	async applyElementSettings( elementId: string, settings: unknown ) {
 		await this.page.evaluate(
 			( args ) => $e.run( 'document/elements/settings', {
 				container: elementor.getContainer( args.elementId ),
@@ -654,7 +654,7 @@ export default class EditorPage extends BasePage {
 	 */
 	async setSwitcherControlValue( controlId: string, setState = true ) {
 		const controlSelector = '.elementor-control-' + controlId,
-			controlLabel = await this.page.locator( controlSelector + ' label.elementor-switch' ),
+			controlLabel = this.page.locator( controlSelector + ' label.elementor-switch' ),
 			currentState = await this.page.locator( controlSelector + ' input[type="checkbox"]' ).isChecked();
 
 		if ( currentState !== Boolean( setState ) ) {
@@ -868,13 +868,13 @@ export default class EditorPage extends BasePage {
 			.include( selector )
 			.analyze();
 
-		await expect.soft( accessibilityScanResults.violations ).toEqual( [] );
+		expect.soft( accessibilityScanResults.violations ).toEqual( [] );
 	}
 
 	async removeClasses( className: string ) {
 		await this.page.evaluate( async ( _class ) => {
 			await new Promise( ( resolve1 ) => {
-				var elems = document.querySelectorAll( `.${ _class }` );
+				const elems = document.querySelectorAll( `.${ _class }` );
 
 				[].forEach.call( elems, function( el: HTMLElement ) {
 					el.classList.remove( _class );
