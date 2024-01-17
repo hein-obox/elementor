@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install envato-elements
+
+Installing Envato Elements – Photos & Elementor Templates (2.0.12)
+Downloading installation package from https://downloads.wordpress.org/plugin/envato-elements.2.0.12.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate envato-elements
+
+Plugin 'envato-elements' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate envato-elements
+
+Plugin 'envato-elements' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

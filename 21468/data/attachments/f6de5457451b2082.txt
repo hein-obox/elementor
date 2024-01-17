@@ -1,0 +1,9 @@
+ℹ Starting 'wp plugin install sticky-header-effects-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin install sticky-header-effects-for-elementor` in 'cli'. (in 1s 903ms)
+ℹ Starting 'wp plugin activate sticky-header-effects-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin activate sticky-header-effects-for-elementor` in 'cli'. (in 0s 978ms)
+ℹ Starting 'wp plugin deactivate sticky-header-effects-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin deactivate sticky-header-effects-for-elementor` in 'cli'. (in 0s 975ms)

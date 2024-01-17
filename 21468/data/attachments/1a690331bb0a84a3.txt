@@ -1,0 +1,12 @@
+ℹ Starting 'wp elementor experiments deactivate container' on the cli container. 
+
+✔ Ran `wp elementor experiments deactivate container` in 'cli'. (in 0s 963ms)
+ℹ Starting 'wp plugin install addon-elements-for-elementor-page-builder' on the cli container. 
+
+✔ Ran `wp plugin install addon-elements-for-elementor-page-builder` in 'cli'. (in 2s 104ms)
+ℹ Starting 'wp plugin activate addon-elements-for-elementor-page-builder' on the cli container. 
+
+✔ Ran `wp plugin activate addon-elements-for-elementor-page-builder` in 'cli'. (in 0s 968ms)
+ℹ Starting 'wp plugin deactivate addon-elements-for-elementor-page-builder' on the cli container. 
+
+✔ Ran `wp plugin deactivate addon-elements-for-elementor-page-builder` in 'cli'. (in 1s 32ms)

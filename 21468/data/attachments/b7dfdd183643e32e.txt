@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install visibility-logic-elementor
+
+Installing Visibility Logic for Elementor (2.3.5.1)
+Downloading installation package from https://downloads.wordpress.org/plugin/visibility-logic-elementor.2.3.5.1.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate visibility-logic-elementor
+
+Plugin 'visibility-logic-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate visibility-logic-elementor
+
+Plugin 'visibility-logic-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
