@@ -1,0 +1,23 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install music-player-for-elementor
+
+Installing Music Player for Elementor – Audio Player & Podcast Player (1.8)
+Downloading installation package from https://downloads.wordpress.org/plugin/music-player-for-elementor.1.8.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate music-player-for-elementor
+
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate music-player-for-elementor
+
+Plugin 'music-player-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

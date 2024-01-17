@@ -1,0 +1,12 @@
+ℹ Starting 'wp elementor experiments deactivate container' on the cli container. 
+
+✔ Ran `wp elementor experiments deactivate container` in 'cli'. (in 0s 959ms)
+ℹ Starting 'wp plugin install post-grid-elementor-addon' on the cli container. 
+
+✔ Ran `wp plugin install post-grid-elementor-addon` in 'cli'. (in 1s 980ms)
+ℹ Starting 'wp plugin activate post-grid-elementor-addon' on the cli container. 
+
+✔ Ran `wp plugin activate post-grid-elementor-addon` in 'cli'. (in 0s 963ms)
+ℹ Starting 'wp plugin deactivate post-grid-elementor-addon' on the cli container. 
+
+✔ Ran `wp plugin deactivate post-grid-elementor-addon` in 'cli'. (in 0s 979ms)
