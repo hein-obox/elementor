@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install visibility-logic-elementor' on the cli container. 
-
-✔ Ran `wp plugin install visibility-logic-elementor` in 'cli'. (in 1s 947ms)
-ℹ Starting 'wp plugin activate visibility-logic-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate visibility-logic-elementor` in 'cli'. (in 1s 8ms)
-ℹ Starting 'wp plugin deactivate visibility-logic-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate visibility-logic-elementor` in 'cli'. (in 1s 11ms)
