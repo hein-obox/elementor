@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install premium-addons-for-elementor
+
+Installing Premium Addons for Elementor (4.10.17)
+Downloading installation package from https://downloads.wordpress.org/plugin/premium-addons-for-elementor.4.10.17.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate premium-addons-for-elementor
+
+Plugin 'premium-addons-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate premium-addons-for-elementor
+
+Plugin 'premium-addons-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
