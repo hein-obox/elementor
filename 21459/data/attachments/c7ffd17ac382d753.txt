@@ -1,0 +1,27 @@
+Success: Experiments deactivated successfully
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install post-grid-elementor-addon
+
+Installing Post Grid Elementor Addon (2.0.16)
+Downloading installation package from https://downloads.wordpress.org/plugin/post-grid-elementor-addon.2.0.16.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate post-grid-elementor-addon
+
+Plugin 'post-grid-elementor-addon' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate post-grid-elementor-addon
+
+Plugin 'post-grid-elementor-addon' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
