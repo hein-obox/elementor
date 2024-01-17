@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install skyboot-custom-icons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install skyboot-custom-icons-for-elementor` in 'cli'. (in 2s 315ms)
-ℹ Starting 'wp plugin activate skyboot-custom-icons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate skyboot-custom-icons-for-elementor` in 'cli'. (in 0s 982ms)
-ℹ Starting 'wp plugin deactivate skyboot-custom-icons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate skyboot-custom-icons-for-elementor` in 'cli'. (in 0s 988ms)
