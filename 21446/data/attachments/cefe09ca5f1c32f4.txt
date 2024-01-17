@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install ele-custom-skin
+
+Installing Elementor Custom Skin (3.1.7)
+Downloading installation package from https://downloads.wordpress.org/plugin/ele-custom-skin.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate ele-custom-skin
+
+Plugin 'ele-custom-skin' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate ele-custom-skin
+
+Plugin 'ele-custom-skin' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

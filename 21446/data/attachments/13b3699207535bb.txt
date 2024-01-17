@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install connect-polylang-elementor
+
+Installing Connect Polylang for Elementor (2.4.3)
+Downloading installation package from https://downloads.wordpress.org/plugin/connect-polylang-elementor.2.4.3.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate connect-polylang-elementor
+
+Plugin 'connect-polylang-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate connect-polylang-elementor
+
+Plugin 'connect-polylang-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
