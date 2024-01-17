@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install dynamic-visibility-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install dynamic-visibility-for-elementor` in 'cli'. (in 2s 754ms)
-ℹ Starting 'wp plugin activate dynamic-visibility-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate dynamic-visibility-for-elementor` in 'cli'. (in 1s 122ms)
-ℹ Starting 'wp plugin deactivate dynamic-visibility-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate dynamic-visibility-for-elementor` in 'cli'. (in 1s 170ms)

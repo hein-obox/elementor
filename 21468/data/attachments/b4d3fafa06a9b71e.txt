@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install sb-elementor-contact-form-db' on the cli container. 
-
-✔ Ran `wp plugin install sb-elementor-contact-form-db` in 'cli'. (in 2s 852ms)
-ℹ Starting 'wp plugin activate sb-elementor-contact-form-db' on the cli container. 
-
-✔ Ran `wp plugin activate sb-elementor-contact-form-db` in 'cli'. (in 1s 34ms)
-ℹ Starting 'wp plugin deactivate sb-elementor-contact-form-db' on the cli container. 
-
-✔ Ran `wp plugin deactivate sb-elementor-contact-form-db` in 'cli'. (in 1s 47ms)
