@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install elementskit-lite
+
+Installing ElementsKit Elementor addons (3.0.4)
+Downloading installation package from https://downloads.wordpress.org/plugin/elementskit-lite.3.0.4.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate elementskit-lite
+
+Plugin 'elementskit-lite' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate elementskit-lite
+
+Plugin 'elementskit-lite' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

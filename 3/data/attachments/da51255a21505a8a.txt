@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install make-column-clickable-elementor
+
+Installing Make Column Clickable Elementor (1.4.0)
+Downloading installation package from https://downloads.wordpress.org/plugin/make-column-clickable-elementor.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate make-column-clickable-elementor
+
+Plugin 'make-column-clickable-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate make-column-clickable-elementor
+
+Plugin 'make-column-clickable-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

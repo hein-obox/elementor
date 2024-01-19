@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install addons-for-elementor
+
+Installing Elementor Addons by Livemesh (8.3.1)
+Downloading installation package from https://downloads.wordpress.org/plugin/addons-for-elementor.8.3.1.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate addons-for-elementor
+
+Plugin 'addons-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate addons-for-elementor
+
+Plugin 'addons-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
