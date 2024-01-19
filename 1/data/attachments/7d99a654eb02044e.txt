@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install exclusive-addons-for-elementor
+
+Installing Exclusive Addons for Elementor (2.6.8)
+Downloading installation package from https://downloads.wordpress.org/plugin/exclusive-addons-for-elementor.2.6.8.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate exclusive-addons-for-elementor
+
+Plugin 'exclusive-addons-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate exclusive-addons-for-elementor
+
+Plugin 'exclusive-addons-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
