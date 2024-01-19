@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install timeline-widget-addon-for-elementor
+
+Installing Timeline Widget For Elementor (Elementor Timeline, Vertical & Horizontal Timeline) (1.5.3)
+Downloading installation package from https://downloads.wordpress.org/plugin/timeline-widget-addon-for-elementor.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate timeline-widget-addon-for-elementor
+
+Plugin 'timeline-widget-addon-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate timeline-widget-addon-for-elementor
+
+Plugin 'timeline-widget-addon-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

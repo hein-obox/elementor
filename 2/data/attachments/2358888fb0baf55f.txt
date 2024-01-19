@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install anywhere-elementor
+
+Installing AnyWhere Elementor (1.2.9)
+Downloading installation package from https://downloads.wordpress.org/plugin/anywhere-elementor.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate anywhere-elementor
+
+Plugin 'anywhere-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate anywhere-elementor
+
+Plugin 'anywhere-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
