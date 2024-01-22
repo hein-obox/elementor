@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install code-block-for-elementor
+
+Installing Code Block Syntax Highlighter for Elementor (1.0.3)
+Downloading installation package from https://downloads.wordpress.org/plugin/code-block-for-elementor.1.0.3.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate code-block-for-elementor
+
+Plugin 'code-block-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate code-block-for-elementor
+
+Plugin 'code-block-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install header-footer-elementor' on the cli container. 
-
-✔ Ran `wp plugin install header-footer-elementor` in 'cli'. (in 1s 981ms)
-ℹ Starting 'wp plugin activate header-footer-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate header-footer-elementor` in 'cli'. (in 1s 9ms)
-ℹ Starting 'wp plugin deactivate header-footer-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate header-footer-elementor` in 'cli'. (in 1s 52ms)

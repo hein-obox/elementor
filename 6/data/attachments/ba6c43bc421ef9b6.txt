@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install skyboot-custom-icons-for-elementor
+
+Installing Skyboot Custom Icons for Elementor – Elementor Icons library – 14000+ Icons (1.0.7)
+Downloading installation package from https://downloads.wordpress.org/plugin/skyboot-custom-icons-for-elementor.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate skyboot-custom-icons-for-elementor
+
+Plugin 'skyboot-custom-icons-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate skyboot-custom-icons-for-elementor
+
+Plugin 'skyboot-custom-icons-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

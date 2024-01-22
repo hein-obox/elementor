@@ -1,0 +1,9 @@
+
+
+-------- playwright lighthouse audit reports --------
+
+
+performance record is 91 and desired threshold was 85
+accessibility record is 90 and desired threshold was 85
+best-practices record is 92 and desired threshold was 85
+seo record is 83 and desired threshold was 80

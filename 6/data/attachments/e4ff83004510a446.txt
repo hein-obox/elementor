@@ -1,0 +1,9 @@
+ℹ Starting 'wp plugin install ht-mega-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin install ht-mega-for-elementor` in 'cli'. (in 2s 250ms)
+ℹ Starting 'wp plugin activate ht-mega-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin activate ht-mega-for-elementor` in 'cli'. (in 0s 982ms)
+ℹ Starting 'wp plugin deactivate ht-mega-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin deactivate ht-mega-for-elementor` in 'cli'. (in 1s 12ms)

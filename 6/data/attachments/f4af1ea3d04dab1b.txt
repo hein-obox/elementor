@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install rife-elementor-extensions
+
+Installing Rife Elementor Extensions & Templates (1.2.1)
+Downloading installation package from https://downloads.wordpress.org/plugin/rife-elementor-extensions.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate rife-elementor-extensions
+
+Plugin 'rife-elementor-extensions' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate rife-elementor-extensions
+
+Plugin 'rife-elementor-extensions' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
