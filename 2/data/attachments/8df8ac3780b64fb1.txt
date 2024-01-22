@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install unlimited-elements-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install unlimited-elements-for-elementor` in 'cli'. (in 1s 727ms)
-ℹ Starting 'wp plugin activate unlimited-elements-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate unlimited-elements-for-elementor` in 'cli'. (in 0s 970ms)
-ℹ Starting 'wp plugin deactivate unlimited-elements-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate unlimited-elements-for-elementor` in 'cli'. (in 0s 943ms)

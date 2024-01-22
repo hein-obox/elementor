@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install make-column-clickable-elementor' on the cli container. 
-
-✔ Ran `wp plugin install make-column-clickable-elementor` in 'cli'. (in 2s 317ms)
-ℹ Starting 'wp plugin activate make-column-clickable-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate make-column-clickable-elementor` in 'cli'. (in 1s 78ms)
-ℹ Starting 'wp plugin deactivate make-column-clickable-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate make-column-clickable-elementor` in 'cli'. (in 1s 90ms)

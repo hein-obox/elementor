@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install jetwidgets-for-elementor
+
+Installing JetWidgets For Elementor (1.0.15)
+Downloading installation package from https://downloads.wordpress.org/plugin/jetwidgets-for-elementor.1.0.15.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate jetwidgets-for-elementor
+
+Plugin 'jetwidgets-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate jetwidgets-for-elementor
+
+Plugin 'jetwidgets-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

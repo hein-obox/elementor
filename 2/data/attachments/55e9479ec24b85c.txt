@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install jeg-elementor-kit' on the cli container. 
-
-✔ Ran `wp plugin install jeg-elementor-kit` in 'cli'. (in 3s 159ms)
-ℹ Starting 'wp plugin activate jeg-elementor-kit' on the cli container. 
-
-✔ Ran `wp plugin activate jeg-elementor-kit` in 'cli'. (in 1s 69ms)
-ℹ Starting 'wp plugin deactivate jeg-elementor-kit' on the cli container. 
-
-✔ Ran `wp plugin deactivate jeg-elementor-kit` in 'cli'. (in 1s 87ms)
