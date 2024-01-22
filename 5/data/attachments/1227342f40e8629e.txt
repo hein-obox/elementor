@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install header-footer-elementor
+
+Installing Elementor Header & Footer Builder (1.6.23)
+Downloading installation package from https://downloads.wordpress.org/plugin/header-footer-elementor.1.6.23.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate header-footer-elementor
+
+Plugin 'header-footer-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate header-footer-elementor
+
+Plugin 'header-footer-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

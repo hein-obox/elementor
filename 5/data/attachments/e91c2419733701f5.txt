@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install ooohboi-steroids-for-elementor
+
+Installing OoohBoi Steroids for Elementor (2.1.6)
+Downloading installation package from https://downloads.wordpress.org/plugin/ooohboi-steroids-for-elementor.2.1.6.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate ooohboi-steroids-for-elementor
+
+Plugin 'ooohboi-steroids-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate ooohboi-steroids-for-elementor
+
+Plugin 'ooohboi-steroids-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install metform
+
+Installing Metform Elementor Contact Form Builder (3.8.3)
+Downloading installation package from https://downloads.wordpress.org/plugin/metform.3.8.3.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate metform
+
+Plugin 'metform' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate metform
+
+Plugin 'metform' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
