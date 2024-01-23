@@ -1,0 +1,12 @@
+ℹ Starting 'wp elementor experiments deactivate container' on the cli container. 
+
+✔ Ran `wp elementor experiments deactivate container` in 'cli'. (in 1s 248ms)
+ℹ Starting 'wp plugin install essential-addons-for-elementor-lite' on the cli container. 
+
+✔ Ran `wp plugin install essential-addons-for-elementor-lite` in 'cli'. (in 1s 899ms)
+ℹ Starting 'wp plugin activate essential-addons-for-elementor-lite' on the cli container. 
+
+✔ Ran `wp plugin activate essential-addons-for-elementor-lite` in 'cli'. (in 0s 948ms)
+ℹ Starting 'wp plugin deactivate essential-addons-for-elementor-lite' on the cli container. 
+
+✔ Ran `wp plugin deactivate essential-addons-for-elementor-lite` in 'cli'. (in 0s 984ms)

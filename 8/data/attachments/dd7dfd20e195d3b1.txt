@@ -1,0 +1,21 @@
+Success: Experiments deactivated successfully
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install happy-elementor-addons
+
+Success: Plugin already installed.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate happy-elementor-addons
+
+Success: Plugin already activated.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate happy-elementor-addons
+
+Plugin 'happy-elementor-addons' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

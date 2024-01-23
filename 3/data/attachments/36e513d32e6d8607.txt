@@ -1,3 +1,0 @@
-ℹ Starting 'wp theme activate hello-elementor' on the cli container. 
-
-✔ Ran `wp theme activate hello-elementor` in 'cli'. (in 1s 12ms)

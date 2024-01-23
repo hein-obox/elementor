@@ -1,0 +1,11 @@
+ℹ Starting 'wp plugin install happy-elementor-addons' on the cli container. 
+
+Warning: happy-elementor-addons: Plugin already installed.
+✔ Ran `wp plugin install happy-elementor-addons` in 'cli'. (in 0s 964ms)
+ℹ Starting 'wp plugin activate happy-elementor-addons' on the cli container. 
+
+Warning: Plugin 'happy-elementor-addons' is already active.
+✔ Ran `wp plugin activate happy-elementor-addons` in 'cli'. (in 0s 924ms)
+ℹ Starting 'wp plugin deactivate happy-elementor-addons' on the cli container. 
+
+✔ Ran `wp plugin deactivate happy-elementor-addons` in 'cli'. (in 0s 921ms)

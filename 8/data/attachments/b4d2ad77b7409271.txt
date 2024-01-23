@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install addon-elements-for-elementor-page-builder
+
+Installing Elementor Addon Elements (1.12.11)
+Downloading installation package from https://downloads.wordpress.org/plugin/addon-elements-for-elementor-page-builder.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate addon-elements-for-elementor-page-builder
+
+Plugin 'addon-elements-for-elementor-page-builder' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate addon-elements-for-elementor-page-builder
+
+Plugin 'addon-elements-for-elementor-page-builder' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
