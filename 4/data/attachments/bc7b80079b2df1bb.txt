@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install ooohboi-steroids-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install ooohboi-steroids-for-elementor` in 'cli'. (in 3s 300ms)
-ℹ Starting 'wp plugin activate ooohboi-steroids-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate ooohboi-steroids-for-elementor` in 'cli'. (in 1s 18ms)
-ℹ Starting 'wp plugin deactivate ooohboi-steroids-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate ooohboi-steroids-for-elementor` in 'cli'. (in 1s 27ms)

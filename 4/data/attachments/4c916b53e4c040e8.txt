@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install code-block-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install code-block-for-elementor` in 'cli'. (in 2s 993ms)
-ℹ Starting 'wp plugin activate code-block-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate code-block-for-elementor` in 'cli'. (in 1s 54ms)
-ℹ Starting 'wp plugin deactivate code-block-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate code-block-for-elementor` in 'cli'. (in 1s 65ms)
