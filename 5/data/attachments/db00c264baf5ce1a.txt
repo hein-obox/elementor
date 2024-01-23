@@ -1,6 +1,0 @@
-ℹ Starting 'wp theme list --status=active --field=name --format=csv' on the cli container. 
-
-✔ Ran `wp theme list --status=active --field=name --format=csv` in 'cli'. (in 2s 67ms)
-ℹ Starting 'wp theme activate twentytwentytwo' on the cli container. 
-
-✔ Ran `wp theme activate twentytwentytwo` in 'cli'. (in 0s 977ms)

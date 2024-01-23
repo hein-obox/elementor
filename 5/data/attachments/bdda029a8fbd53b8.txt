@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install astra-sites' on the cli container. 
-
-✔ Ran `wp plugin install astra-sites` in 'cli'. (in 3s 337ms)
-ℹ Starting 'wp plugin activate astra-sites' on the cli container. 
-
-✔ Ran `wp plugin activate astra-sites` in 'cli'. (in 1s 95ms)
-ℹ Starting 'wp plugin deactivate astra-sites' on the cli container. 
-
-✔ Ran `wp plugin deactivate astra-sites` in 'cli'. (in 1s 151ms)

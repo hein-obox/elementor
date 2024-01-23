@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install the-plus-addons-for-elementor-page-builder
+
+Installing The Plus Addons for Elementor (5.3.5)
+Downloading installation package from https://downloads.wordpress.org/plugin/the-plus-addons-for-elementor-page-builder.5.3.5.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate the-plus-addons-for-elementor-page-builder
+
+Plugin 'the-plus-addons-for-elementor-page-builder' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate the-plus-addons-for-elementor-page-builder
+
+Plugin 'the-plus-addons-for-elementor-page-builder' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
