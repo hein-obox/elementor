@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install jetwidgets-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install jetwidgets-for-elementor` in 'cli'. (in 2s 233ms)
-ℹ Starting 'wp plugin activate jetwidgets-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate jetwidgets-for-elementor` in 'cli'. (in 1s 21ms)
-ℹ Starting 'wp plugin deactivate jetwidgets-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate jetwidgets-for-elementor` in 'cli'. (in 0s 999ms)

@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install elementskit-lite' on the cli container. 
-
-✔ Ran `wp plugin install elementskit-lite` in 'cli'. (in 2s 253ms)
-ℹ Starting 'wp plugin activate elementskit-lite' on the cli container. 
-
-✔ Ran `wp plugin activate elementskit-lite` in 'cli'. (in 1s 21ms)
-ℹ Starting 'wp plugin deactivate elementskit-lite' on the cli container. 
-
-✔ Ran `wp plugin deactivate elementskit-lite` in 'cli'. (in 1s 30ms)

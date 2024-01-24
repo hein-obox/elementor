@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install rife-elementor-extensions' on the cli container. 
-
-✔ Ran `wp plugin install rife-elementor-extensions` in 'cli'. (in 2s 4ms)
-ℹ Starting 'wp plugin activate rife-elementor-extensions' on the cli container. 
-
-✔ Ran `wp plugin activate rife-elementor-extensions` in 'cli'. (in 1s 39ms)
-ℹ Starting 'wp plugin deactivate rife-elementor-extensions' on the cli container. 
-
-✔ Ran `wp plugin deactivate rife-elementor-extensions` in 'cli'. (in 1s 19ms)
