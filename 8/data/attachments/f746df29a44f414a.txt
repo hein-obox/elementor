@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install timeline-widget-addon-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install timeline-widget-addon-for-elementor` in 'cli'. (in 1s 459ms)
-ℹ Starting 'wp plugin activate timeline-widget-addon-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate timeline-widget-addon-for-elementor` in 'cli'. (in 0s 931ms)
-ℹ Starting 'wp plugin deactivate timeline-widget-addon-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate timeline-widget-addon-for-elementor` in 'cli'. (in 0s 945ms)

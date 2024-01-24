@@ -1,0 +1,9 @@
+ℹ Starting 'wp plugin install addon-elements-for-elementor-page-builder' on the cli container. 
+
+✔ Ran `wp plugin install addon-elements-for-elementor-page-builder` in 'cli'. (in 1s 981ms)
+ℹ Starting 'wp plugin activate addon-elements-for-elementor-page-builder' on the cli container. 
+
+✔ Ran `wp plugin activate addon-elements-for-elementor-page-builder` in 'cli'. (in 1s 10ms)
+ℹ Starting 'wp plugin deactivate addon-elements-for-elementor-page-builder' on the cli container. 
+
+✔ Ran `wp plugin deactivate addon-elements-for-elementor-page-builder` in 'cli'. (in 0s 985ms)

@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install royal-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin install royal-elementor-addons` in 'cli'. (in 1s 620ms)
-ℹ Starting 'wp plugin activate royal-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin activate royal-elementor-addons` in 'cli'. (in 0s 979ms)
-ℹ Starting 'wp plugin deactivate royal-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin deactivate royal-elementor-addons` in 'cli'. (in 0s 971ms)
