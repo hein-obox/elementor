@@ -1,0 +1,9 @@
+ℹ Starting 'wp plugin install stratum' on the cli container. 
+
+✔ Ran `wp plugin install stratum` in 'cli'. (in 1s 450ms)
+ℹ Starting 'wp plugin activate stratum' on the cli container. 
+
+✔ Ran `wp plugin activate stratum` in 'cli'. (in 0s 872ms)
+ℹ Starting 'wp plugin deactivate stratum' on the cli container. 
+
+✔ Ran `wp plugin deactivate stratum` in 'cli'. (in 0s 952ms)

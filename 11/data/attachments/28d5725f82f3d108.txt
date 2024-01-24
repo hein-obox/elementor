@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install bdthemes-prime-slider-lite
+
+Installing Prime Slider – Addons For Elementor (Revolution of a slider, Hero Slider, Media Slider, Drag Drop Slider, Video Slider, Product Slider, Ecommerce Slider) (3.11.12)
+Downloading installation package from https://downloads.wordpress.org/plugin/bdthemes-prime-slider-lite.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate bdthemes-prime-slider-lite
+
+Plugin 'bdthemes-prime-slider-lite' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate bdthemes-prime-slider-lite
+
+Plugin 'bdthemes-prime-slider-lite' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

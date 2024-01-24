@@ -1,0 +1,27 @@
+Success: Experiments deactivated successfully
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install essential-addons-for-elementor-lite
+
+Installing Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders (5.9.7)
+Downloading installation package from https://downloads.wordpress.org/plugin/essential-addons-for-elementor-lite.5.9.7.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate essential-addons-for-elementor-lite
+
+Plugin 'essential-addons-for-elementor-lite' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate essential-addons-for-elementor-lite
+
+Plugin 'essential-addons-for-elementor-lite' deactivated.
+Success: Deactivated 1 of 1 plugins.
+
