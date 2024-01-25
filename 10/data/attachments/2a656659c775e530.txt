@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install powerpack-lite-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install powerpack-lite-for-elementor` in 'cli'. (in 2s 865ms)
-ℹ Starting 'wp plugin activate powerpack-lite-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate powerpack-lite-for-elementor` in 'cli'. (in 1s 93ms)
-ℹ Starting 'wp plugin deactivate powerpack-lite-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate powerpack-lite-for-elementor` in 'cli'. (in 1s 111ms)

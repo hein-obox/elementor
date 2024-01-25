@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install premium-addons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install premium-addons-for-elementor` in 'cli'. (in 3s 64ms)
-ℹ Starting 'wp plugin activate premium-addons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate premium-addons-for-elementor` in 'cli'. (in 1s 104ms)
-ℹ Starting 'wp plugin deactivate premium-addons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate premium-addons-for-elementor` in 'cli'. (in 1s 132ms)

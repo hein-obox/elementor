@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install exclusive-addons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install exclusive-addons-for-elementor` in 'cli'. (in 1s 581ms)
-ℹ Starting 'wp plugin activate exclusive-addons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate exclusive-addons-for-elementor` in 'cli'. (in 0s 958ms)
-ℹ Starting 'wp plugin deactivate exclusive-addons-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate exclusive-addons-for-elementor` in 'cli'. (in 0s 941ms)

@@ -1,0 +1,9 @@
+ℹ Starting 'wp plugin install connect-polylang-elementor' on the cli container. 
+
+✔ Ran `wp plugin install connect-polylang-elementor` in 'cli'. (in 1s 590ms)
+ℹ Starting 'wp plugin activate connect-polylang-elementor' on the cli container. 
+
+✔ Ran `wp plugin activate connect-polylang-elementor` in 'cli'. (in 1s 10ms)
+ℹ Starting 'wp plugin deactivate connect-polylang-elementor' on the cli container. 
+
+✔ Ran `wp plugin deactivate connect-polylang-elementor` in 'cli'. (in 0s 961ms)
