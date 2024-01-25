@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install tutor-lms-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin install tutor-lms-elementor-addons` in 'cli'. (in 1s 478ms)
-ℹ Starting 'wp plugin activate tutor-lms-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin activate tutor-lms-elementor-addons` in 'cli'. (in 0s 912ms)
-ℹ Starting 'wp plugin deactivate tutor-lms-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin deactivate tutor-lms-elementor-addons` in 'cli'. (in 0s 922ms)

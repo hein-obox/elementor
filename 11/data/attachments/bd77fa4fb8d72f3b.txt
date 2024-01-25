@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install ele-custom-skin' on the cli container. 
-
-✔ Ran `wp plugin install ele-custom-skin` in 'cli'. (in 1s 523ms)
-ℹ Starting 'wp plugin activate ele-custom-skin' on the cli container. 
-
-✔ Ran `wp plugin activate ele-custom-skin` in 'cli'. (in 0s 998ms)
-ℹ Starting 'wp plugin deactivate ele-custom-skin' on the cli container. 
-
-✔ Ran `wp plugin deactivate ele-custom-skin` in 'cli'. (in 1s 75ms)

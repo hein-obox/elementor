@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install metform' on the cli container. 
-
-✔ Ran `wp plugin install metform` in 'cli'. (in 1s 752ms)
-ℹ Starting 'wp plugin activate metform' on the cli container. 
-
-✔ Ran `wp plugin activate metform` in 'cli'. (in 1s 30ms)
-ℹ Starting 'wp plugin deactivate metform' on the cli container. 
-
-✔ Ran `wp plugin deactivate metform` in 'cli'. (in 1s 26ms)

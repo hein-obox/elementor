@@ -1,0 +1,25 @@
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin install unlimited-elements-for-elementor
+
+Installing Unlimited Elements For Elementor (Free Widgets, Addons, Templates) (1.5.94)
+Downloading installation package from https://downloads.wordpress.org/plugin/unlimited-elements-for-elementor.zip...
+Unpacking the package...
+Installing the plugin...
+Plugin installed successfully.
+Success: Installed 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin activate unlimited-elements-for-elementor
+
+Plugin 'unlimited-elements-for-elementor' activated.
+Success: Activated 1 of 1 plugins.
+
+
+> elementor@3.20.0 wp-env
+> wp-env run cli wp plugin deactivate unlimited-elements-for-elementor
+
+Plugin 'unlimited-elements-for-elementor' deactivated.
+Success: Deactivated 1 of 1 plugins.
+

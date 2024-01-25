@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install envato-elements' on the cli container. 
-
-✔ Ran `wp plugin install envato-elements` in 'cli'. (in 1s 483ms)
-ℹ Starting 'wp plugin activate envato-elements' on the cli container. 
-
-✔ Ran `wp plugin activate envato-elements` in 'cli'. (in 1s 3ms)
-ℹ Starting 'wp plugin deactivate envato-elements' on the cli container. 
-
-✔ Ran `wp plugin deactivate envato-elements` in 'cli'. (in 1s 12ms)
