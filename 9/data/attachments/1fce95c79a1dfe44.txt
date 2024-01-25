@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install essential-addons-for-elementor-lite' on the cli container. 
-
-✔ Ran `wp plugin install essential-addons-for-elementor-lite` in 'cli'. (in 1s 989ms)
-ℹ Starting 'wp plugin activate essential-addons-for-elementor-lite' on the cli container. 
-
-✔ Ran `wp plugin activate essential-addons-for-elementor-lite` in 'cli'. (in 0s 990ms)
-ℹ Starting 'wp plugin deactivate essential-addons-for-elementor-lite' on the cli container. 
-
-✔ Ran `wp plugin deactivate essential-addons-for-elementor-lite` in 'cli'. (in 1s 25ms)

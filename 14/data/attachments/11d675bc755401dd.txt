@@ -1,0 +1,10 @@
+ℹ Starting 'wp plugin install astra-sites' on the cli container. 
+
+✔ Ran `wp plugin install astra-sites` in 'cli'. (in 2s 952ms)
+ℹ Starting 'wp plugin activate astra-sites' on the cli container. 
+
+✔ Ran `wp plugin activate astra-sites` in 'cli'. (in 1s 54ms)
+ℹ Starting 'wp plugin deactivate astra-sites' on the cli container. 
+
+[25-Jan-2024 08:44:18 UTC] /var/www/html/wp-content/plugins/astra-sites/inc/lib/zip-ai/zip-ai.php
+✔ Ran `wp plugin deactivate astra-sites` in 'cli'. (in 1s 99ms)

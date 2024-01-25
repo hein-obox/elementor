@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install happy-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin install happy-elementor-addons` in 'cli'. (in 3s 340ms)
-ℹ Starting 'wp plugin activate happy-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin activate happy-elementor-addons` in 'cli'. (in 1s 76ms)
-ℹ Starting 'wp plugin deactivate happy-elementor-addons' on the cli container. 
-
-✔ Ran `wp plugin deactivate happy-elementor-addons` in 'cli'. (in 1s 72ms)

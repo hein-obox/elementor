@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install bdthemes-prime-slider-lite' on the cli container. 
-
-✔ Ran `wp plugin install bdthemes-prime-slider-lite` in 'cli'. (in 2s 47ms)
-ℹ Starting 'wp plugin activate bdthemes-prime-slider-lite' on the cli container. 
-
-✔ Ran `wp plugin activate bdthemes-prime-slider-lite` in 'cli'. (in 1s 0ms)
-ℹ Starting 'wp plugin deactivate bdthemes-prime-slider-lite' on the cli container. 
-
-✔ Ran `wp plugin deactivate bdthemes-prime-slider-lite` in 'cli'. (in 1s 44ms)

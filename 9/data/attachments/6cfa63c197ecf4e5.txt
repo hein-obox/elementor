@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install jetsticky-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin install jetsticky-for-elementor` in 'cli'. (in 2s 420ms)
-ℹ Starting 'wp plugin activate jetsticky-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate jetsticky-for-elementor` in 'cli'. (in 1s 99ms)
-ℹ Starting 'wp plugin deactivate jetsticky-for-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate jetsticky-for-elementor` in 'cli'. (in 1s 79ms)
