@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install jetgridbuilder' on the cli container. 
-
-✔ Ran `wp plugin install jetgridbuilder` in 'cli'. (in 1s 853ms)
-ℹ Starting 'wp plugin activate jetgridbuilder' on the cli container. 
-
-✔ Ran `wp plugin activate jetgridbuilder` in 'cli'. (in 0s 994ms)
-ℹ Starting 'wp plugin deactivate jetgridbuilder' on the cli container. 
-
-✔ Ran `wp plugin deactivate jetgridbuilder` in 'cli'. (in 0s 991ms)

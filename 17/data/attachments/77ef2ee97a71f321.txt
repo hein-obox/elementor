@@ -1,0 +1,9 @@
+ℹ Starting 'wp plugin install addons-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin install addons-for-elementor` in 'cli'. (in 1s 652ms)
+ℹ Starting 'wp plugin activate addons-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin activate addons-for-elementor` in 'cli'. (in 0s 951ms)
+ℹ Starting 'wp plugin deactivate addons-for-elementor' on the cli container. 
+
+✔ Ran `wp plugin deactivate addons-for-elementor` in 'cli'. (in 0s 936ms)

@@ -1,9 +1,0 @@
-ℹ Starting 'wp plugin install anywhere-elementor' on the cli container. 
-
-✔ Ran `wp plugin install anywhere-elementor` in 'cli'. (in 1s 755ms)
-ℹ Starting 'wp plugin activate anywhere-elementor' on the cli container. 
-
-✔ Ran `wp plugin activate anywhere-elementor` in 'cli'. (in 1s 20ms)
-ℹ Starting 'wp plugin deactivate anywhere-elementor' on the cli container. 
-
-✔ Ran `wp plugin deactivate anywhere-elementor` in 'cli'. (in 0s 995ms)
