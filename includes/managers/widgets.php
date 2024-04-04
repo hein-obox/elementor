@@ -63,7 +63,7 @@ class Widgets_Manager {
 			'common',
 			'inner-section',
 			'heading',
-			'testOne',
+			'table',
 			'image',
 			'text-editor',
 			'video',

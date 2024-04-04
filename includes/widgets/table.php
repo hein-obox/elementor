@@ -5,22 +5,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 
 /**
- * Elementor testOne widget.
+ * Elementor table widget.
  *
- * Elementor widget that displays an eye-catching headlines.
  *
  * @since 1.0.0
  */
-class Widget_testOne extends Widget_Base {
+class Widget_Table extends Widget_Base {
 
 	/**
 	 * Get widget name.
 	 *
-	 * Retrieve testOne widget name.
+	 * Retrieve table widget name.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -28,13 +27,13 @@ class Widget_testOne extends Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'testOne';
+		return 'table';
 	}
 
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve testOne widget title.
+	 * Retrieve table widget title.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -42,13 +41,13 @@ class Widget_testOne extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'testOne', 'elementor' );
+		return esc_html__( 'table', 'elementor' );
 	}
 
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve testOne widget icon.
+	 * Retrieve table widget icon.
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -56,13 +55,13 @@ class Widget_testOne extends Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-code';
+		return 'eicon-table';
 	}
 
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the testOne widget belongs to.
+	 * Retrieve the list of categories the table widget belongs to.
 	 *
 	 * Used to determine where to display the widget in the editor.
 	 *
@@ -86,7 +85,7 @@ class Widget_testOne extends Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'testOne', 'title', 'text' ];
+		return [ 'table', 'title', 'text' ];
 	}
 
 	/**
@@ -104,14 +103,14 @@ class Widget_testOne extends Widget_Base {
 			'condition' => ! Utils::has_pro(),
 			'image' => esc_url( ELEMENTOR_ASSETS_URL . 'images/go-pro.svg' ),
 			'image_alt' => esc_attr__( 'Upgrade', 'elementor' ),
-			'description' => esc_html__( 'Create captivating testOnes that rotate with the Animated Headline Widget.', 'elementor' ),
-			'upgrade_url' => esc_url( 'https://go.elementor.com/go-pro-testOne-widget/' ),
+			'description' => esc_html__( 'Create captivating tables that rotate with the Animated Headline Widget.', 'elementor' ),
+			'upgrade_url' => esc_url( 'https://go.elementor.com/go-pro-table-widget/' ),
 			'upgrade_text' => esc_html__( 'Upgrade Now', 'elementor' ),
 		];
 	}
 
 	/**
-	 * Register testOne widget controls.
+	 * Register table widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -123,7 +122,7 @@ class Widget_testOne extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'table content', 'textdomain' ),
+				'label' => esc_html__( 'Table content', 'elementor' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -131,23 +130,22 @@ class Widget_testOne extends Widget_Base {
 		$this->add_control(
 			'show_title',
 			[
-				'label' => esc_html__( 'Show Columns Titles', 'textdomain' ),
+				'label' => esc_html__( 'Show Columns Titles', 'elementor' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'Show', 'textdomain' ),
-				'label_off' => esc_html__( 'Hide', 'textdomain' ),
+				'label_on' => esc_html__( 'Show', 'elementor' ),
+				'label_off' => esc_html__( 'Hide', 'elementor' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
 		);
 
 		$this->add_control(
-			'columnOne',
+			'column_one',
 			[
 				'label' => esc_html__( 'Title column 1', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
 				'placeholder' => esc_html__( 'Enter column title', 'elementor' ),
-				'default' => esc_html__( 'Column title', 'elementor' ),
 				'dynamic' => [
 					'active' => true,
 				],
@@ -155,26 +153,24 @@ class Widget_testOne extends Widget_Base {
 		);
 
 		$this->add_control(
-			'columnTwo',
+			'column_two',
 			[
 				'label' => esc_html__( 'Title column 2', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
 				'placeholder' => esc_html__( 'Enter column title', 'elementor' ),
-				'default' => esc_html__( 'Column title', 'elementor' ),
 				'dynamic' => [
 					'active' => true,
 				],
 			]
 		);
 		$this->add_control(
-			'columnThree',
+			'column_three',
 			[
 				'label' => esc_html__( 'Title column 3', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'placeholder' => esc_html__( 'enter column title', 'elementor' ),
-				'default' => esc_html__( 'Column title', 'elementor' ),
+				'placeholder' => esc_html__( 'Enter column title', 'elementor' ),
 				'dynamic' => [
 					'active' => true,
 				],
@@ -188,7 +184,7 @@ class Widget_testOne extends Widget_Base {
 			[
 				'label' => esc_html__( 'Text', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
-				'label_block' => true,
+				'label_block' => false,
 				'placeholder' => esc_html__( 'List Item', 'elementor' ),
 				'default' => esc_html__( 'List Item', 'elementor' ),
 				'dynamic' => [
@@ -200,25 +196,25 @@ class Widget_testOne extends Widget_Base {
 		$this->add_control(
 			'list',
 			[
-				'label' => esc_html__( 'Columns contents', 'textdomain' ),
-				'show_label' => esc_html__( true, 'textdomain' ),
+				'label' => esc_html__( 'Columns contents', 'elementor' ),
+				'show_label' => esc_html__( true, 'elementor' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'list_title' => esc_html__( 'Content column 1', 'textdomain' ),
-						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'textdomain' ),
+						'list_title' => esc_html__( 'Content column 1', 'elementor' ),
+						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'elementor' ),
 					],
 					[
-						'list_title' => esc_html__( 'Content column 2', 'textdomain' ),
-						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'textdomain' ),
+						'list_title' => esc_html__( 'Content column 2', 'elementor' ),
+						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'elementor' ),
 					],
 					[
-						'list_title' => esc_html__( 'Content column 3', 'textdomain' ),
-						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'textdomain' ),
+						'list_title' => esc_html__( 'Content column 3', 'elementor' ),
+						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'elementor' ),
 					],
 				],
-				'title_field' => '{{{ list_title }}}',
+				  
 			]
 			);
 
@@ -228,7 +224,7 @@ class Widget_testOne extends Widget_Base {
 	}
 
 	/**
-	 * Render testOne widget output on the frontend.
+	 * Render table widget output on the frontend.
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
@@ -241,21 +237,23 @@ class Widget_testOne extends Widget_Base {
 
 		echo '<table>';
 		if ( 'yes' === $settings['show_title'] ) {
-		
-				echo '<tr>';
-					echo '<th>' . $settings['columnOne'] . '</th>';
-					echo '<th>' . $settings['columnTwo'] . '</th>';
-					echo '<th>' . $settings['columnThree'] . '</th>';
-				echo '</tr>';
+		        echo '<thead>';
+					echo '<tr>';
+						echo '<th>' . $settings['column_one'] . '</th>';
+						echo '<th>' . $settings['column_two'] . '</th>';
+						echo '<th>' . $settings['column_three'] . '</th>';
+					echo '</tr>';
+				echo '</thead>';
 			}
 			
 			if ( $settings['list'] ) {
-				echo '<tr>';
-				foreach (  $settings['list'] as $item ) {
-					echo '<td class="elementor-repeater-item-' . esc_attr( $item['_id'] ) . '">' . $item['list_title'] . '</td>';
-					// echo '<dd>' . $item['list_content'] . '</dd>';
-				}
-				echo '</tr>';
+				echo '<tbody>';
+					echo '<tr>';
+					foreach (  $settings['list'] as $item ) {
+						echo '<td class="elementor-repeater-item-' . esc_attr( $item['_id'] ) . '">' . $item['list_title'] . '</td>';
+					}
+					echo '</tr>';
+				echo '</tbody>';
 			}
 			echo '</table>';
 	}
@@ -265,21 +263,23 @@ class Widget_testOne extends Widget_Base {
 		
 			<table>
 				<# if ( 'yes' === settings.show_title ) { #>
-					<tr>
-						<th>{{{ settings.columnOne }}}</th>
-						<th>{{{ settings.columnTwo }}}</th>
-						<th>{{{ settings.columnThree }}}</th>
-					</tr>
-				
+					<thead>
+						<tr>
+							<th>{{{ settings.column_one }}}</th>
+							<th>{{{ settings.column_two }}}</th>
+							<th>{{{ settings.column_three }}}</th>
+						</tr>
+				    </thead>
 				<# } #>
 				
 				<# if ( settings.list.length ) { #>
-					<tr>
-						<# _.each( settings.list, function( item ) { #>
-							<td class="elementor-repeater-item-{{ item._id }}">{{{ item.list_title }}}</td>
-							<!-- <dd>{{{ item.list_content }}}</dd> -->
-						<# }); #>
-					</tr>
+					<tbody>
+						<tr>
+							<# _.each( settings.list, function( item ) { #>
+								<td class="elementor-repeater-item-{{ item._id }}">{{{item.list_title}}}</td>
+							<# }); #>
+						</tr>
+					</tbody>
 				<# } #>
 			</table>
 		<?php
