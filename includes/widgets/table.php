@@ -41,7 +41,7 @@ class Widget_Table extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'table', 'elementor' );
+		return esc_html__( 'Table', 'elementor' );
 	}
 
 	/**
@@ -85,7 +85,7 @@ class Widget_Table extends Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'table', 'title', 'text' ];
+		return [ 'table'];
 	}
 
 	/**
@@ -103,7 +103,7 @@ class Widget_Table extends Widget_Base {
 			'condition' => ! Utils::has_pro(),
 			'image' => esc_url( ELEMENTOR_ASSETS_URL . 'images/go-pro.svg' ),
 			'image_alt' => esc_attr__( 'Upgrade', 'elementor' ),
-			'description' => esc_html__( 'Create captivating tables that rotate with the Animated Headline Widget.', 'elementor' ),
+			'description' => esc_html__( 'Create captivating tables.', 'elementor' ),
 			'upgrade_url' => esc_url( 'https://go.elementor.com/go-pro-table-widget/' ),
 			'upgrade_text' => esc_html__( 'Upgrade Now', 'elementor' ),
 		];
@@ -213,12 +213,9 @@ class Widget_Table extends Widget_Base {
 						'list_title' => esc_html__( 'Content column 3', 'elementor' ),
 						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'elementor' ),
 					],
-				],
-				  
+				]
 			]
 			);
-
-		
 
 		$this->end_controls_section();
 	}
@@ -233,57 +230,135 @@ class Widget_Table extends Widget_Base {
 	 */
 	
 	protected function render() {
-		$settings = $this->get_settings_for_display();
+		 $settings = $this->get_settings_for_display();
 
-		echo '<table>';
-		if ( 'yes' === $settings['show_title'] ) {
-		        echo '<thead>';
-					echo '<tr>';
-						echo '<th>' . $settings['column_one'] . '</th>';
-						echo '<th>' . $settings['column_two'] . '</th>';
-						echo '<th>' . $settings['column_three'] . '</th>';
-					echo '</tr>';
-				echo '</thead>';
-			}
+		 echo '<table>';
+			if ( 'yes' === $settings['show_title'] ) {
+					echo '<thead>';
+						echo '<tr>';
+							echo '<th>' . $settings['column_one'] . '</th>';
+							echo '<th>' . $settings['column_two'] . '</th>';
+							echo '<th>' . $settings['column_three'] . '</th>';
+						echo '</tr>';
+					echo '</thead>';
+				}
 			
 			if ( $settings['list'] ) {
-				echo '<tbody>';
-					echo '<tr>';
-					foreach (  $settings['list'] as $item ) {
-						echo '<td class="elementor-repeater-item-' . esc_attr( $item['_id'] ) . '">' . $item['list_title'] . '</td>';
-					}
-					echo '</tr>';
-				echo '</tbody>';
-			}
+					$list = $settings['list'];
+					echo '<tbody>';
+					$count;
+					if (count($list) % 3 == 0) {
+						for ($i = 0; $i < count($list)-1; $i += 3) {
+								$count=$i + 3;
+								
+									echo '<tr>';
+										for ($j = $i; $j < $count; $j++) {
+												echo '<td class="elementor-repeater-item-' . esc_attr( $list[$j]['_id'] ) . '">' . $list[$j]['text'] . '</td>';
+											}
+									echo '</tr>';
+							}
+						
+					} else {
+							if (count($list) % 3 == 1) {
+								for ($i = 0; $i < count($list) - 2; $i += 3){
+									$count=$i + 3;
+									
+										echo '<tr>';
+										for ($j = $i; $j < $count; $j++){
+											echo '<td class="elementor-repeater-item-' . esc_attr( $list[$j]['_id'] ) . '">' . $list[$j]['text'] . '</td>';
+										}
+										echo '</tr>';
+								}
+									echo '<tr>';
+										echo '<td class="elementor-repeater-item-' . esc_attr( $list[$count]['_id'] ) . '">' . $list[$count]['text'] . '</td>';
+									echo '</tr>';
+									
+							} else {
+								for ($i = 0; $i < count($list) - 3; $i += 3){
+									$count=$i + 3;
+									
+										echo '<tr>';
+										for ($j = $i; $j < $count; $j++){
+											echo '<td class="elementor-repeater-item-' . esc_attr( $list[$j]['_id'] ) . '">' . $list[$j]['text'] . '</td>';
+										}
+										echo '</tr>';
+								}
+									echo '<tr>';
+										echo '<td class="elementor-repeater-item-' . esc_attr( $list[$count]['_id'] ) . '">' . $list[$count]['text'] . '</td>';
+										echo '<td class="elementor-repeater-item-' . esc_attr( $list[$count + 1]['_id'] ) . '">' . $list[$count + 1]['text'] . '</td>';
+									echo '</tr>';
+							};
+						};
+						echo '</tbody>';
+				};
 			echo '</table>';
-	}
-
-	protected function content_template() {
-		?>
-		
-			<table>
-				<# if ( 'yes' === settings.show_title ) { #>
-					<thead>
-						<tr>
-							<th>{{{ settings.column_one }}}</th>
-							<th>{{{ settings.column_two }}}</th>
-							<th>{{{ settings.column_three }}}</th>
-						</tr>
-				    </thead>
-				<# } #>
-				
-				<# if ( settings.list.length ) { #>
-					<tbody>
-						<tr>
-							<# _.each( settings.list, function( item ) { #>
-								<td class="elementor-repeater-item-{{ item._id }}">{{{item.list_title}}}</td>
-							<# }); #>
-						</tr>
-					</tbody>
-				<# } #>
-			</table>
-		<?php
-	}
-
+		}
 	
+
+			protected function content_template() {
+				?>
+				
+					<table>
+						<# if ( 'yes' === settings.show_title ) { #>
+							<thead>
+								<tr>
+									<th>{{{ settings.column_one }}}</th>
+									<th>{{{ settings.column_two }}}</th>
+									<th>{{{ settings.column_three }}}</th>
+								</tr>
+							</thead>
+						<# } #>
+						
+						<# if ( settings.list.length ) { #>
+							<# let list = settings.list #>
+							<# let count; #>
+							<tbody>
+								<# if(list.length % 3 == 0){ #>
+
+									<# for(let i = 0; i < list.length - 1; i+=3){ #>
+										<# count = i + 3 #>
+										<tr>
+											<# for(let j = i; j < count; j++){ #>
+												<td class="elementor-repeater-item-{{ list[j]._id }}">{{{list[j].text}}}</td>
+											<# } #>	
+										</tr>
+									<# } #>	
+
+									<# } else { #>
+
+									<# if (list.length % 3 == 1){ #>
+										<# for(let i = 0; i < list.length - 2; i+= 3){ #>
+										<# count = i + 3 #>
+										<tr>
+											<# for(let j = i; j < count; j++){ #>
+												<td class="elementor-repeater-item-{{ list[j]._id }}">{{{list[j].text}}}</td>
+											<# } #>	
+										</tr>
+										<# } #>	
+										<tr>
+											<td class="elementor-repeater-item-{{ list[count]._id }}">{{{list[count].text}}}</td>
+										</tr>		
+										<# } else { #>
+											<# for(let i = 0; i < list.length - 3; i+= 3){ #>
+											<# count = i + 3 #>
+											<tr>
+												<# for(let j = i; j < count; j++){ #>
+													<td class="elementor-repeater-item-{{ list[j]._id }}">{{{list[j].text}}}</td>
+												<#}#>	
+											</tr>
+											<# } #>	
+											<tr>
+												<td class="elementor-repeater-item-{{ list[count]._id }}">{{{list[count].text}}}</td>
+												<td class="elementor-repeater-item-{{ list[count + 1]._id }}">{{{list[count + 1].text}}}</td>
+											</tr>	
+										<# } #>
+								<# } #>
+
+								
+							</tbody>
+						<# } #>
+					</table>
+				<?php
+			}
+
 }
