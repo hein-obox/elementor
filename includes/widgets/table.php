@@ -177,43 +177,38 @@ class Widget_Table extends Widget_Base {
 			]
 		);
 
-		$repeater = new repeater();
-
-		$repeater->add_control(
-			'text',
-			[
-				'label' => esc_html__( 'Row', 'elementor' ),
-				'type' => Controls_Manager::TEXT,
-				'label_block' => false,
-				'placeholder' => esc_html__( 'row content', 'elementor' ),
-				'default' => esc_html__( 'column content', 'elementor' ),
-				'dynamic' => [
-					'active' => true,
-				],
-			]
-		);
-
+		
 		$this->add_control(
-			'row',
+			'rows',
 			[
-				'label' => esc_html__( 'Columns contents', 'elementor' ),
+				'label' => esc_html__( "Rows' contents", 'elementor' ),
 				'show_label' => esc_html__( true, 'elementor' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
-				'default' => [
+				'fields' => [
 					[
-						'row_title' => esc_html__( 'Content column 1', 'elementor' ),
-						'row_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'elementor' ),
+						'name' => 'column_content_one',
+						'label' => esc_html__( 'Content column 1', 'elementor' ),
+						'type' => \Elementor\Controls_Manager::TEXT,
+						'default' => esc_html__( 'Content column 1' , 'elementor' ),
+						'label_block' => false,
 					],
 					[
-						'row_title' => esc_html__( 'Content column 2', 'elementor' ),
-						'row_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'elementor' ),
+						'name' => 'column_content_two',
+						'label' => esc_html__( 'column content 2', 'elementor' ),
+						'type' => \Elementor\Controls_Manager::TEXT,
+						'default' => esc_html__( 'Content column 2' , 'elementor' ),
+						'label_block' => false,
 					],
 					[
-						'row_title' => esc_html__( 'Content column 3', 'elementor' ),
-						'row_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'elementor' ),
+						'name' => 'column_content_three',
+						'label' => esc_html__( 'column content 3', 'elementor' ),
+						'type' => \Elementor\Controls_Manager::TEXT,
+						'default' => esc_html__( 'Content column 3' , 'elementor' ),
+						'label_block' => false,
 					],
-				]
+				],
+				'title_field' => esc_html__( 'row', 'elementor'),
+				
 			]
 			);
 
@@ -243,52 +238,17 @@ class Widget_Table extends Widget_Base {
 					echo '</thead>';
 				}
 			
-			if ( $settings['row'] ) {
-					$row = $settings['row'];
+			if ( $settings['rows'] ) {
 					echo '<tbody>';
-					$count;
-					if (count($row) % 3 == 0) {
-						for ($i = 0; $i < count($row)-1; $i += 3) {
-								$count=$i + 3;
-								
-									echo '<tr>';
-										for ($j = $i; $j < $count; $j++) {
-												echo '<td class="elementor-repeater-item-' . esc_attr( $row[$j]['_id'] ) . '">' . $row[$j]['text'] . '</td>';
-											}
-									echo '</tr>';
-							}
-						
-					} else {
-							if (count($row) % 3 == 1) {
-								for ($i = 0; $i < count($row) - 2; $i += 3){
-									$count=$i + 3;
-									
-										echo '<tr>';
-										for ($j = $i; $j < $count; $j++){
-											echo '<td class="elementor-repeater-item-' . esc_attr( $row[$j]['_id'] ) . '">' . $row[$j]['text'] . '</td>';
-										}
-										echo '</tr>';
-								}
-										echo '<tr>';
-											echo '<td class="elementor-repeater-item-' . esc_attr( $row[$count]['_id'] ) . '">' . $row[$count]['text'] . '</td>';
-										echo '</tr>';
-									
-							} else {
-								for ($i = 0; $i < count($row) - 3; $i += 3){
-									$count=$i + 3;
-									
-										echo '<tr>';
-										for ($j = $i; $j < $count; $j++){
-											echo '<td class="elementor-repeater-item-' . esc_attr( $row[$j]['_id'] ) . '">' . $row[$j]['text'] . '</td>';
-										}
-										echo '</tr>';
-								}
-										echo '<tr>';
-											echo '<td class="elementor-repeater-item-' . esc_attr( $row[$count]['_id'] ) . '">' . $row[$count]['text'] . '</td>';
-											echo '<td class="elementor-repeater-item-' . esc_attr( $row[$count + 1]['_id'] ) . '">' . $row[$count + 1]['text'] . '</td>';
-										echo '</tr>';
-							};
-						};
+					$rows = $settings['rows'];
+					for ($i=0; $i < count($rows) - 1; $i++) { 
+						echo '<tr>';
+								echo '<td class="elementor-repeater-item-' . esc_attr( $rows[$i]['_id'] ) . '">' .$rows[$i]['column_content_one'] . '</td>';
+								echo '<td class="elementor-repeater-item-' . esc_attr( $rows[$i]['_id'] ) . '">' .$rows[$i]['column_content_two'] . '</td>';
+								echo '<td class="elementor-repeater-item-' . esc_attr( $rows[$i]['_id'] ) . '">' .$rows[$i]['column_content_three'] . '</td>';
+						echo '<tr>';
+					}
+					
 					echo '</tbody>';
 				};
 				echo '</table>';
@@ -299,7 +259,7 @@ class Widget_Table extends Widget_Base {
 				?>
 				
 					<table>
-						<# if ( 'yes' === settings.show_title ) { #>
+							<# if ( 'yes' === settings.show_title ) { #>
 							<thead>
 								<tr>
 									<th>{{{ settings.column_one }}}</th>
@@ -309,52 +269,16 @@ class Widget_Table extends Widget_Base {
 							</thead>
 						<# } #>
 						
-						<# if ( settings.row.length ) { #>
-							<# let row = settings.row #>
-							<# let count; #>
+						<# if ( settings.rows.length ) { #>
 							<tbody>
-								<# if(row.length % 3 == 0){ #>
-
-									<# for(let i = 0; i < row.length - 1; i+= 3){ #>
-										<# count = i + 3 #>
-										<tr>
-											<# for(let j = i; j < count; j++){ #>
-												<td class="elementor-repeater-item-{{ row[j]._id }}">{{{row[j].text}}}</td>
-											<# } #>	
-										</tr>
-									<# } #>	
-
-									<# } else { #>
-
-									<# if (row.length % 3 == 1){ #>
-										<# for(let i = 0; i < row.length - 2; i+= 3){ #>
-										<# count = i + 3 #>
-										<tr>
-											<# for(let j = i; j < count; j++){ #>
-												<td class="elementor-repeater-item-{{ row[j]._id }}">{{{row[j].text}}}</td>
-											<# } #>	
-										</tr>
-										<# } #>	
-										<tr>
-												<td class="elementor-repeater-item-{{ row[count]._id }}">{{{row[count].text}}}</td>
-										</tr>		
-										<# } else { #>
-											<# for(let i = 0; i < row.length - 3; i+= 3){ #>
-											<# count = i + 3 #>
-											<tr>
-												<# for(let j = i; j < count; j++){ #>
-													<td class="elementor-repeater-item-{{ row[j]._id }}">{{{row[j].text}}}</td>
-												<#}#>	
-											</tr>
-											<# } #>	
-											<tr>
-													<td class="elementor-repeater-item-{{ row[count]._id }}">{{{row[count].text}}}</td>
-													<td class="elementor-repeater-item-{{ row[count + 1]._id }}">{{{row[count + 1].text}}}</td>
-											</tr>	
-										<# } #>
+								<# let rows = settings.rows #>
+								<# for(let i = 0; i <= rows.length - 1; i++){ #>
+									<tr>
+										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{rows[i].column_content_one}}}</td>
+										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{rows[i].column_content_two}}}</td>
+										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{rows[i].column_content_three}}}</td>
+									</tr>
 								<# } #>
-
-								
 							</tbody>
 						<# } #>
 					</table>
