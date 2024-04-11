@@ -89,27 +89,6 @@ class Widget_Table extends Widget_Base {
 	}
 
 	/**
-	 * Get widget upsale data.
-	 *
-	 * Retrieve the widget promotion data.
-	 *
-	 * @since 3.18.0
-	 * @access protected
-	 *
-	 * @return array Widget promotion data.
-	 */
-	protected function get_upsale_data() {
-		return [
-			'condition' => ! Utils::has_pro(),
-			'image' => esc_url( ELEMENTOR_ASSETS_URL . 'images/go-pro.svg' ),
-			'image_alt' => esc_attr__( 'Upgrade', 'elementor' ),
-			'description' => esc_html__( 'Create captivating tables.', 'elementor' ),
-			'upgrade_url' => esc_url( 'https://go.elementor.com/go-pro-table-widget/' ),
-			'upgrade_text' => esc_html__( 'Upgrade Now', 'elementor' ),
-		];
-	}
-
-	/**
 	 * Register table widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
@@ -181,29 +160,26 @@ class Widget_Table extends Widget_Base {
 		$this->add_control(
 			'rows',
 			[
-				'label' => esc_html__( "Rows' contents", 'elementor' ),
-				'show_label' => esc_html__( true, 'elementor' ),
+				'label' => esc_html__( "Content rows", 'elementor' ),
+				'show_label' => true,
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => [
 					[
 						'name' => 'column_content_one',
 						'label' => esc_html__( 'Content column 1', 'elementor' ),
 						'type' => \Elementor\Controls_Manager::TEXT,
-						'default' => esc_html__( 'Content column 1' , 'elementor' ),
 						'label_block' => false,
 					],
 					[
 						'name' => 'column_content_two',
 						'label' => esc_html__( 'column content 2', 'elementor' ),
 						'type' => \Elementor\Controls_Manager::TEXT,
-						'default' => esc_html__( 'Content column 2' , 'elementor' ),
 						'label_block' => false,
 					],
 					[
 						'name' => 'column_content_three',
 						'label' => esc_html__( 'column content 3', 'elementor' ),
 						'type' => \Elementor\Controls_Manager::TEXT,
-						'default' => esc_html__( 'Content column 3' , 'elementor' ),
 						'label_block' => false,
 					],
 				],
@@ -241,7 +217,7 @@ class Widget_Table extends Widget_Base {
 			if ( $settings['rows'] ) {
 					echo '<tbody>';
 					$rows = $settings['rows'];
-					for ($i=0; $i < count($rows) - 1; $i++) { 
+					for ($i=0; $i <= count($rows)-1; $i++) { 
 						echo '<tr>';
 								echo '<td class="elementor-repeater-item-' . esc_attr( $rows[$i]['_id'] ) . '">' .$rows[$i]['column_content_one'] . '</td>';
 								echo '<td class="elementor-repeater-item-' . esc_attr( $rows[$i]['_id'] ) . '">' .$rows[$i]['column_content_two'] . '</td>';
@@ -272,11 +248,11 @@ class Widget_Table extends Widget_Base {
 						<# if ( settings.rows.length ) { #>
 							<tbody>
 								<# let rows = settings.rows #>
-								<# for(let i = 0; i <= rows.length - 1; i++){ #>
+								<# for( let i = 0; i <= rows.length - 1; i++ ){ #>
 									<tr>
-										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{rows[i].column_content_one}}}</td>
-										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{rows[i].column_content_two}}}</td>
-										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{rows[i].column_content_three}}}</td>
+										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{ rows[i].column_content_one }}}</td>
+										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{ rows[i].column_content_two }}}</td>
+										<td class="elementor-repeater-item-{{ rows[i]._id }}">{{{ rows[i].column_content_three }}}</td>
 									</tr>
 								<# } #>
 							</tbody>
