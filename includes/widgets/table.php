@@ -5,8 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+
 
 /**
  * Elementor table widget.
@@ -143,6 +144,7 @@ class Widget_Table extends Widget_Base {
 				],
 			]
 		);
+
 		$this->add_control(
 			'column_three',
 			[
@@ -156,7 +158,6 @@ class Widget_Table extends Widget_Base {
 			]
 		);
 
-		
 		$this->add_control(
 			'rows',
 			[
@@ -188,7 +189,66 @@ class Widget_Table extends Widget_Base {
 			]
 			);
 
+		
 		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'style_section',
+			[
+				'label' => esc_html__( 'Style', 'elementor' ),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'table_head_color',
+			[
+				'label' => esc_html__( 'Table head Color', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'global' => [
+					'default' => Global_Colors::COLOR_TEXT,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .table_head' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'table_head_background_color',
+			[
+				'label' => esc_html__( 'Table head background Color', 'elementor' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'global' => [
+					'default' => Global_Colors::COLOR_ACCENT,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .table_head' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'sub_heading_typography',
+				'global' => [
+					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Typography::TYPOGRAPHY_SECONDARY,
+				],
+				'selector' => '{{WRAPPER}} .table_head',
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'border',
+				'selector' => '{{WRAPPER}} .table_head',
+			]
+		);
+
+		$this->end_controls_section();
+
 	}
 
 	/**
@@ -203,9 +263,9 @@ class Widget_Table extends Widget_Base {
 	protected function render() {
 		 $settings = $this->get_settings_for_display();
 
-		 echo '<table>';
+		 echo '<table id="table">';
 			if ( 'yes' === $settings['show_title'] ) {
-					echo '<thead>';
+					echo '<thead class="table_head">';
 						echo '<tr>';
 							echo '<th>' . $settings['column_one'] . '</th>';
 							echo '<th>' . $settings['column_two'] . '</th>';
@@ -217,7 +277,7 @@ class Widget_Table extends Widget_Base {
 			if ( $settings['rows'] ) {
 					echo '<tbody>';
 					$rows = $settings['rows'];
-					for ($i=0; $i <= count($rows)-1; $i++) { 
+					for ($i=0; $i <= count($rows) - 1; $i++) { 
 						echo '<tr>';
 								echo '<td class="elementor-repeater-item-' . esc_attr( $rows[$i]['_id'] ) . '">' .$rows[$i]['column_content_one'] . '</td>';
 								echo '<td class="elementor-repeater-item-' . esc_attr( $rows[$i]['_id'] ) . '">' .$rows[$i]['column_content_two'] . '</td>';
@@ -236,7 +296,7 @@ class Widget_Table extends Widget_Base {
 				
 					<table>
 							<# if ( 'yes' === settings.show_title ) { #>
-							<thead>
+							<thead class="table_head">
 								<tr>
 									<th>{{{ settings.column_one }}}</th>
 									<th>{{{ settings.column_two }}}</th>
