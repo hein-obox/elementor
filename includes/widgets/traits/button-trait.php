@@ -503,6 +503,47 @@ trait Button_Trait {
 		);
 	}
 
+	protected function register_icon_style_controls( $args = [] ) {
+		$default_args = [
+				'section_condition' => [],
+				'alignment_default' => '',
+				'alignment_control_prefix_class' => 'elementor%s-align-',
+				'content_alignment_default' => '',
+		];
+
+		$args = wp_parse_args( $args, $default_args );
+
+		$this->add_responsive_control(
+				'test',
+				[
+						'label' => esc_html__( 'test', 'elementor' ),
+						'type' => Controls_Manager::CHOOSE,
+						'options' => [
+								'left'    => [
+										'title' => esc_html__( 'Left', 'elementor' ),
+										'icon' => 'eicon-h-align-left',
+								],
+								'center' => [
+										'title' => esc_html__( 'Center', 'elementor' ),
+										'icon' => 'eicon-h-align-center',
+								],
+								'right' => [
+										'title' => esc_html__( 'Right', 'elementor' ),
+										'icon' => 'eicon-h-align-right',
+								],
+								'justify' => [
+										'title' => esc_html__( 'Stretch', 'elementor' ),
+										'icon' => 'eicon-h-align-stretch',
+								],
+						],
+						'prefix_class' => $args['alignment_control_prefix_class'],
+						'default' => $args['alignment_default'],
+						'condition' => $args['section_condition'],
+				]
+		);
+
+	}
+
 	/**
 	 * Render button widget output on the frontend.
 	 *
