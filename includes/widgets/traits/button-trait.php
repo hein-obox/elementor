@@ -448,148 +448,34 @@ trait Button_Trait {
 
 		$args = wp_parse_args( $args, $default_args );
 
-		$start = is_rtl() ? 'right' : 'left';
-		$end = is_rtl() ? 'left' : 'right';
-
-		$this->add_control(
-			'icon_align',
-			[
-				'label' => esc_html__( 'Position', 'elementor' ),
-				'type' => Controls_Manager::CHOOSE,
-				
-				'options' => [
-					'row' => [
-						'title' => esc_html__( 'Start', 'elementor' ),
-						'icon' => "eicon-h-align-{$start}",
-					],
-					'row-reverse' => [
-						'title' => esc_html__( 'End', 'elementor' ),
-						'icon' => "eicon-h-align-{$end}",
-					],
-					'column' => [
-						'title' => esc_html__( 'Above', 'elementor' ),
-						'icon' => "eicon-v-align-top",
-					],
-					'column-reverse' => [
-						'title' => esc_html__( 'Below', 'elementor' ),
-						'icon' => "eicon-v-align-bottom",
-					],
-				],
-				'selectors_dictionary' => [
-					'left' => is_rtl() ? 'row-reverse' : 'row',
-					'right' => is_rtl() ? 'row' : 'row-reverse',
-					'above' => is_rtl() ? 'column-reverse' : 'column',
-					'below' => is_rtl() ? 'column' : 'column-reverse',
-				],
-				'selectors' => [
-					'{{WRAPPER}} .elementor-button-content-wrapper' => 'flex-direction: {{VALUE}};',
-				],
-				'condition' => array_merge(
-					$args['section_condition'],
-					[
-						'text!' => '',
-						'selected_icon[value]!' => '',
-					]
-				),
-			]
-		);
-
-		$this->add_responsive_control( 
-			'icon_size', 
-			[
-				'label' => esc_html__( 'Size', 'elementor' ),
-				'type' => Controls_Manager::SLIDER,
-				'range' => [
-					'px' => [
-						'max' => 100,
-					],
-					'em' => [
-						'max' => 10,
-					],
-					'rem' => [
-						'max' => 10,
-					],
-				],
-				'size_units' => [ 'px', 'em', 'rem', 'vw', 'custom' ],
-				'selectors' => [
-					'{{WRAPPER}}' => '--button-icon-size: {{SIZE}}{{UNIT}}',
-				],
-		] );
-
-		$this->add_control(
-			'icon_indent',
-			[
-				'label' => esc_html__( 'Spacing', 'elementor' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', 'em', 'rem', 'custom' ],
-				'range' => [
-					'px' => [
-						'max' => 50,
-					],
-					'em' => [
-						'max' => 5,
-					],
-					'rem' => [
-						'max' => 5,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .elementor-button .elementor-button-content-wrapper' => 'gap: {{SIZE}}{{UNIT}};',
-				],
-				'condition' => array_merge(
-					$args['section_condition'],
-					[
-						'text!' => '',
-						'selected_icon[value]!' => '',
-					]
-				),
-			]
-		);
-
-		
-		$this->start_controls_tabs( 'icons_button_style', [
-			'condition' => $args['section_condition'],
-		] );
-				
-		$this->start_controls_tab(
-			'icon_button_normal',
+		$this->add_responsive_control(
+				'test',
 				[
-					'label' => esc_html__( 'Normal', 'elementor' ),
-					'condition' => $args['section_condition'],
-				]
-					);
-					
-				$this->add_control( 'icon_color', [
-						'label' => esc_html__( 'Color', 'elementor' ),
-						'type' => Controls_Manager::COLOR,
-						'selectors' => [
-							'{{WRAPPER}}' => '--button-icon-color: {{VALUE}};',
+						'label' => esc_html__( 'test', 'elementor' ),
+						'type' => Controls_Manager::CHOOSE,
+						'options' => [
+								'left'    => [
+										'title' => esc_html__( 'Left', 'elementor' ),
+										'icon' => 'eicon-h-align-left',
+								],
+								'center' => [
+										'title' => esc_html__( 'Center', 'elementor' ),
+										'icon' => 'eicon-h-align-center',
+								],
+								'right' => [
+										'title' => esc_html__( 'Right', 'elementor' ),
+										'icon' => 'eicon-h-align-right',
+								],
+								'justify' => [
+										'title' => esc_html__( 'Stretch', 'elementor' ),
+										'icon' => 'eicon-h-align-stretch',
+								],
 						],
-					] );
-						
-				$this->end_controls_tab();
-						
-				
-				$this->start_controls_tab(
-						'icon_button_hover',
-						[
-							'label' => esc_html__( 'Hover', 'elementor' ),
-							'condition' => $args['section_condition'],
-							]
-						);
-
-				$this->add_control( 'icon_color_hover', [
-					'label' => esc_html__( 'Color', 'elementor' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}}' => '--button-icon-color-hover: {{VALUE}};',
-					],
-					] );
-					
-				$this->end_controls_tab();
-					
-
-		$this->end_controls_tabs();
+						'prefix_class' => $args['alignment_control_prefix_class'],
+						'default' => $args['alignment_default'],
+						'condition' => $args['section_condition'],
+				]
+		);
 
 	}
 
