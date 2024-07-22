@@ -68,6 +68,7 @@ class Widgets_Manager {
 			'common',
 			'inner-section',
 			'heading',
+			'table',
 			'image',
 			'text-editor',
 			'video',
