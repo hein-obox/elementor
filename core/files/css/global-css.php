@@ -96,7 +96,7 @@ class Global_CSS extends Base {
 	}
 
 	protected function get_data() {
-		if ( null === get_the_ID() ) {
+		if ( empty( get_the_ID() ) ) {
 			return [];
 		}
 
