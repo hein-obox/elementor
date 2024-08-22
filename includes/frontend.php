@@ -683,8 +683,6 @@ class Frontend extends App {
 			do_action( 'elementor/frontend/after_enqueue_styles' );
 
 			if ( ! Plugin::$instance->preview->is_preview_mode() ) {
-				$this->parse_global_css_code();
-
 				$post_id = get_the_ID();
 				// Check $post_id for virtual pages. check is singular because the $post_id is set to the first post on archive pages.
 				if ( $post_id && is_singular() ) {
@@ -692,6 +690,8 @@ class Frontend extends App {
 					if ( ! empty( $page_assets ) ) {
 						Plugin::$instance->assets_loader->enable_assets( $page_assets );
 					}
+
+					$this->parse_global_css_code( get_the_ID() );
 
 					$css_file = Post_CSS::create( get_the_ID() );
 					$css_file->enqueue();
@@ -1063,8 +1063,8 @@ class Frontend extends App {
 	 * @since 1.2.0
 	 * @access protected
 	 */
-	protected function parse_global_css_code() {
-		$post_id_suffix = ! empty( get_the_ID() ) ? '-' . get_the_ID() : '';
+	protected function parse_global_css_code( $post_id = false ) {
+		$post_id_suffix = ! empty( $post_id  ) ? '-' .  $post_id  : '';
 		$scheme_css_file = Global_CSS::create( 'global' . $post_id_suffix . '.css' );
 
 		$scheme_css_file->enqueue();
@@ -1160,8 +1160,13 @@ class Frontend extends App {
 
 		if ( ! $this->_is_excerpt ) {
 			if ( $document->is_autosave() ) {
+				// Not sure hos to handle this.
+				// Maybe load full 'global.css' here?
+				$this->parse_global_css_code( $post_id );
+
 				$css_file = Post_Preview::create( $document->get_post()->ID );
 			} else {
+				$this->parse_global_css_code( $post_id );
 				$css_file = Post_CSS::create( $post_id );
 			}
 
