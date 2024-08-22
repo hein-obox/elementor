@@ -1162,7 +1162,7 @@ class Frontend extends App {
 			if ( $document->is_autosave() ) {
 				// Not sure hos to handle this.
 				// Maybe load full 'global.css' here?
-				$this->parse_global_css_code( $post_id );
+				$this->parse_global_css_code();
 
 				$css_file = Post_Preview::create( $document->get_post()->ID );
 			} else {
