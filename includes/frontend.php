@@ -1064,7 +1064,8 @@ class Frontend extends App {
 	 * @access protected
 	 */
 	protected function parse_global_css_code() {
-		$scheme_css_file = Global_CSS::create( 'global.css' );
+		$post_id_suffix = ! empty( get_the_ID() ) ? '-' . get_the_ID() : '';
+		$scheme_css_file = Global_CSS::create( 'global' . $post_id_suffix . '.css' );
 
 		$scheme_css_file->enqueue();
 	}

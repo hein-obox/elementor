@@ -95,6 +95,42 @@ class Global_CSS extends Base {
 		return $this->get_meta( 'time' ) < get_option( Settings::UPDATE_TIME_FIELD );
 	}
 
+	protected function get_data() {
+		if ( null === get_the_ID() ) {
+			return [];
+		}
+
+		$document = Plugin::$instance->documents->get( get_the_ID() );
+		return $document ? $document->get_elements_data() : [];
+	}
+
+	protected function get_widget_types_for_post() {
+		$widget_data = $this->get_data();
+
+		if ( empty( $widget_data ) ) {
+			return [];
+		}
+
+		return $this->get_widget_types( $widget_data );
+	}
+
+	protected function get_widget_types( array $elements ): array {
+		$widgetTypes = [];
+
+		foreach ($elements as $element) {
+			if (isset($element['widgetType'])) {
+				$widgetTypes[] = $element['widgetType'];
+			}
+
+			if (!empty($element['elements'])) {
+				$widgetTypes = array_merge($widgetTypes, $this->get_widget_types($element['elements']));
+			}
+		}
+
+		return $widgetTypes;
+	}
+
+
 	/**
 	 * Render schemes CSS.
 	 *
@@ -104,6 +140,9 @@ class Global_CSS extends Base {
 	 * @access private
 	 */
 	private function render_schemes_and_globals_css() {
+		$is_post = ! empty( get_the_ID() );
+		$post_widgets = $this->get_widget_types_for_post();
+
 		$elementor = Plugin::$instance;
 
 		/** @var Manager $module */
@@ -117,6 +156,12 @@ class Global_CSS extends Base {
 		}
 
 		foreach ( $elementor->widgets_manager->get_widget_types() as $widget ) {
+			$widget_name = $widget->get_name();
+
+			if ( $is_post && ! in_array( $widget_name, $post_widgets ) ) {
+				continue;
+			}
+
 			$controls = $widget->get_controls();
 
 			$global_controls = [];
@@ -152,7 +197,7 @@ class Global_CSS extends Base {
 			}
 
 			foreach ( $global_controls as $control ) {
-				$this->add_control_rules( $control, $controls, function( $control ) {}, [ '{{WRAPPER}}' ], [ '.elementor-widget-' . $widget->get_name() ], $global_values );
+				$this->add_control_rules( $control, $controls, function( $control ) {}, [ '{{WRAPPER}}' ], [ '.elementor-widget-' . $widget_name ], $global_values );
 			}
 		}
 	}
