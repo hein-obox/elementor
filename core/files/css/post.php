@@ -28,15 +28,6 @@ class Post extends Base {
 
 	const META_KEY = '_elementor_css';
 
-	/**
-	 * Post ID.
-	 *
-	 * Holds the current post ID.
-	 *
-	 * @var int
-	 */
-	private $post_id;
-
 	protected function is_global_parsing_supported() {
 		return true;
 	}

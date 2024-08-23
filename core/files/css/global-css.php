@@ -95,41 +95,32 @@ class Global_CSS extends Base {
 		return $this->get_meta( 'time' ) < get_option( Settings::UPDATE_TIME_FIELD );
 	}
 
-	protected function get_data() {
-		if ( empty( get_the_ID() ) ) {
-			return [];
-		}
-
-		$document = Plugin::$instance->documents->get( get_the_ID() );
-		return $document ? $document->get_elements_data() : [];
+	private function is_not_post_or_page() {
+		return empty( get_the_ID() );
 	}
 
-	protected function get_widget_types_for_post() {
-		$widget_data = $this->get_data();
-
-		if ( empty( $widget_data ) ) {
-			return [];
-		}
-
-		return $this->get_widget_types( $widget_data );
+	protected function get_all_elements_data(): array {
+		return $this->is_not_post_or_page()
+			? Plugin::$instance->documents->get_all_elements()
+			: $this->get_data();
 	}
 
-	protected function get_widget_types( array $elements ): array {
+	protected function get_widget_types( $elements = null ): array {
+		$elements_data = empty( $elements ) ? $this->get_all_elements_data() : $elements;
 		$widgetTypes = [];
 
-		foreach ($elements as $element) {
-			if (isset($element['widgetType'])) {
-				$widgetTypes[] = $element['widgetType'];
+		foreach ( $elements_data as $element_data ) {
+			if ( isset( $element_data['widgetType'] ) ) {
+				$widgetTypes[] = $element_data['widgetType'];
 			}
 
-			if (!empty($element['elements'])) {
-				$widgetTypes = array_merge($widgetTypes, $this->get_widget_types($element['elements']));
+			if ( ! empty( $element_data['elements'] ) ) {
+				$widgetTypes = array_merge( $widgetTypes, $this->get_widget_types( $element_data['elements'] ) );
 			}
 		}
 
 		return $widgetTypes;
 	}
-
 
 	/**
 	 * Render schemes CSS.
@@ -140,8 +131,7 @@ class Global_CSS extends Base {
 	 * @access private
 	 */
 	private function render_schemes_and_globals_css() {
-		$is_post = ! empty( get_the_ID() );
-		$post_widgets = $this->get_widget_types_for_post();
+		$document_widgets = $this->get_widget_types();
 
 		$elementor = Plugin::$instance;
 
@@ -158,7 +148,7 @@ class Global_CSS extends Base {
 		foreach ( $elementor->widgets_manager->get_widget_types() as $widget ) {
 			$widget_name = $widget->get_name();
 
-			if ( $is_post && ! in_array( $widget_name, $post_widgets ) ) {
+			if ( ! in_array( $widget_name, $document_widgets ) ) {
 				continue;
 			}
 

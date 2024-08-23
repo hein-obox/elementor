@@ -774,4 +774,14 @@ class Documents_Manager {
 
 		return $this->cpt[ $post_type ] ?? 'post';
 	}
+
+	public function get_all_elements() {
+		$elements = [];
+
+		foreach ( $this->documents as $document ) {
+			$elements = array_merge( $document->get_elements_data(), $elements );
+		}
+
+		return $elements;
+	}
 }
