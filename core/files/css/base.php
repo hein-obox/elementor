@@ -66,15 +66,6 @@ abstract class Base extends Base_File {
 	private $dynamic_elements_ids = [];
 
 	/**
-	 * Post ID.
-	 *
-	 * Holds the current post ID.
-	 *
-	 * @var int
-	 */
-	protected $post_id;
-
-	/**
 	 * Stylesheet object.
 	 *
 	 * Holds the CSS file stylesheet instance.
@@ -1025,20 +1016,5 @@ abstract class Base extends Base_File {
 		$globals = $controls_stack->get_settings( '__globals__' );
 
 		return ! empty( $globals[ $control_global_key ] );
-	}
-
-	/**
-	 * Get post data.
-	 *
-	 * Retrieve raw post data from the database.
-	 *
-	 * @since 1.9.0
-	 * @access protected
-	 *
-	 * @return array Post data.
-	 */
-	protected function get_data() {
-		$document = Plugin::$instance->documents->get( $this->post_id );
-		return $document ? $document->get_elements_data() : [];
 	}
 }

@@ -99,14 +99,12 @@ class Global_CSS extends Base {
 		return empty( get_the_ID() );
 	}
 
-	protected function get_all_elements_data(): array {
-		return $this->is_not_post_or_page()
-			? Plugin::$instance->documents->get_all_elements()
-			: $this->get_data();
+	protected function get_all_documents_elements_data(): array {
+		return Plugin::$instance->documents->get_all_elements();
 	}
 
 	protected function get_widget_types( $elements = null ): array {
-		$elements_data = empty( $elements ) ? $this->get_all_elements_data() : $elements;
+		$elements_data = empty( $elements ) ? $this->get_all_documents_elements_data() : $elements;
 		$widgetTypes = [];
 
 		foreach ( $elements_data as $element_data ) {
