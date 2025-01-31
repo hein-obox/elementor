@@ -5,6 +5,7 @@ use Elementor\Core\Common\Modules\Ajax\Module as Ajax;
 use Elementor\Core\Utils\Collection;
 use Elementor\Core\Utils\Exceptions;
 use Elementor\Core\Utils\Force_Locale;
+use Elementor\Modules\EyalDemo\Widgets\EyalDemo;
 use Elementor\Modules\NestedAccordion\Widgets\Nested_Accordion;
 use Elementor\Modules\NestedElements\Module as NestedElementsModule;
 use Elementor\Modules\NestedTabs\Widgets\NestedTabs;
@@ -51,6 +52,7 @@ class Widgets_Manager {
 		NestedElementsModule::EXPERIMENT_NAME => [
 			NestedTabs::class,
 			Nested_Accordion::class,
+			EyalDemo::class,
 		],
 	];
 
