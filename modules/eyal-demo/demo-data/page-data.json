@@ -1,0 +1,105 @@
+[
+  {
+    "id": "4128432",
+    "elType": "container",
+    "settings": [],
+    "elements": [
+      {
+        "id": "db7e1cd",
+        "elType": "widget",
+        "settings": {
+          "title": "Your title ",
+          "__globals__": {
+            "color": ""
+          },
+          "color": "#0783B8"
+        },
+        "elements": [],
+        "widgetType": "eyal-demo"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "ea5b95d",
+    "elType": "container",
+    "settings": [],
+    "elements": [
+      {
+        "id": "7468796",
+        "elType": "widget",
+        "settings": {
+          "title": "Add Your Heading Text Here",
+          "link": {
+            "url": "https:\/\/google.com\/",
+            "is_external": "on",
+            "nofollow": "",
+            "custom_attributes": ""
+          },
+          "align": "center",
+          "title_color": "#12739C",
+          "__dynamic__": []
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "5d6f618",
+        "elType": "widget",
+        "settings": {
+          "image": {
+            "url": "http:\/\/elementor.local\/wp-content\/uploads\/2025\/01\/Client-Marketing-Agency.jpg",
+            "id": 53507,
+            "size": "",
+            "alt": "",
+            "source": "library"
+          },
+          "image_size": "medium",
+          "align": "left",
+          "width": {
+            "unit": "px",
+            "size": 310,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "px",
+            "size": "",
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "px",
+            "size": "",
+            "sizes": []
+          },
+          "opacity": {
+            "unit": "px",
+            "size": 0.59999999999999998,
+            "sizes": []
+          },
+          "opacity_hover": {
+            "unit": "px",
+            "size": 0.97999999999999998,
+            "sizes": []
+          },
+          "background_hover_transition": {
+            "unit": "px",
+            "size": 1,
+            "sizes": []
+          },
+          "hover_animation": "grow",
+          "image_border_radius": {
+            "unit": "px",
+            "top": "20",
+            "right": "20",
+            "bottom": "20",
+            "left": "20",
+            "isLinked": true
+          }
+        },
+        "elements": [],
+        "widgetType": "image"
+      }
+    ],
+    "isInner": false
+  }
+]
