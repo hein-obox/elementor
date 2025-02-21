@@ -19,7 +19,7 @@
 			row-gap: var(--a-panel-gap);
 		}
 
-		*:not(:has(> button)) {
+		*:not(:has(> .MuiButtonBase-root)) {
 			column-gap: var(--a-panel-gap);
 		}
 	}
