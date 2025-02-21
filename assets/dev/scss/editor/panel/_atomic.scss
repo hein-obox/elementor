@@ -3,7 +3,6 @@
 	--a-panel-padding-block: calc(2 * var(--a-panel-base-unit));
 	--a-panel-padding-inline: calc(2 * var(--a-panel-base-unit));
 	--a-panel-gap: calc(2 * var(--a-panel-base-unit));
-	--a-panel-hide-empty-element: none;
 
 	.MuiListItemButton-root {
 		padding-inline: var(--a-panel-padding-inline);
@@ -14,13 +13,8 @@
 		}
 	}
 
-	//.MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > .MuiStack-root > *:not(:has(> div:only-child:has(> label)), :has(> label, > .MuiButtonBase-root)) {
-	//	row-gap: var(--a-panel-gap);
-	//}
-
 	.MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > .MuiStack-root {
 
-		//*:not(:has(> div:only-child:has(> label)), :has(> label, > .MuiButtonBase-root)) {
 		*:not(:has(> label,> .MuiButtonBase-root)) {
 			row-gap: var(--a-panel-gap);
 		}
@@ -31,6 +25,10 @@
 	}
 
 	div:empty {
-		display: var(--a-panel-hide-empty-element);
+		position: absolute;
+		left: -1vw;
+		top: -1vh;
+		width: 0;
+		height: 0;
 	}
 }
