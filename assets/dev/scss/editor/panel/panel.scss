@@ -185,6 +185,8 @@ body.e-has-notification {
 	}
 }
 
-
-//Compatibility
+// Compatibility
 @import "compatibility";
+
+// Atomic editor.
+@import "atomic";
