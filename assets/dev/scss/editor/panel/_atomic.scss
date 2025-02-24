@@ -13,6 +13,7 @@
 		--a-panel-popover-spacing: calc(1.5 * var(--a-panel-base-unit));
 		--a-panel-spacing: var(--a-panel-popover-spacing);
 
+		&:not(:has(.MuiTag-root)) > *:not(:has(.MuiTabPanel-root)),
 		.MuiTabPanel-root {
 			padding-block: var(--a-panel-padding-block);
 			padding-inline: var(--a-panel-padding-inline);
@@ -21,20 +22,20 @@
 
 	.MuiListItemButton-root {
 		padding-inline: var(--a-panel-padding-inline);
+
+		& + .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > .MuiStack-root:not(:has(.MuiListItemButton-root + .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner)) {
+			padding-block: var(--a-panel-padding-block);
+			padding-inline: var(--a-panel-padding-inline);
+		}
 	}
 
 	.MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > .MuiStack-root {
 
-		&:not(:where(.MuiCollapse-root .MuiCollapse-root)) {
-			padding-block: var(--a-panel-padding-block);
-			padding-inline: var(--a-panel-padding-inline);
-		}
-
-		*:not(:has(> label,> .MuiButtonBase-root)) {
+		*:not(:has(> label,> .MuiButtonBase-root)):not(.MuiInputBase-root) {
 			row-gap: var(--a-panel-row-gap);
 		}
 
-		*:not(:has(> .MuiButtonBase-root)) {
+		*:not(:has(> .MuiButtonBase-root)):not(.MuiInputBase-root) {
 			column-gap: var(--a-panel-column-gap);
 		}
 	}
