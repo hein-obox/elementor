@@ -1,21 +1,34 @@
 .a-panel-main {
 	--a-panel-base-unit: 8px;
-	--a-panel-double-base-unit: calc(2 * var(--a-panel-base-unit));
-	--a-panel-padding-block: var(--a-panel-double-base-unit);
-	--a-panel-padding-inline: var(--a-panel-double-base-unit);
-	--a-panel-row-gap: var(--a-panel-double-base-unit);
-	--a-panel-column-gap: var(--a-panel-double-base-unit);
+	--a-panel-spacing: calc(2 * var(--a-panel-base-unit));
 
-	.MuiListItemButton-root {
-		padding-inline: var(--a-panel-padding-inline);
+	* {
+		--a-panel-padding-block: var(--a-panel-spacing);
+		--a-panel-padding-inline: var(--a-panel-spacing);
+		--a-panel-row-gap: var(--a-panel-spacing);
+		--a-panel-column-gap: var(--a-panel-spacing);
+	}
 
-		& + .MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > .MuiStack-root:not(:where(.MuiCollapse-root .MuiCollapse-root)) {
+	.MuiPopover-root {
+		--a-panel-popover-spacing: calc(1.5 * var(--a-panel-base-unit));
+		--a-panel-spacing: var(--a-panel-popover-spacing);
+
+		.MuiTabPanel-root {
 			padding-block: var(--a-panel-padding-block);
 			padding-inline: var(--a-panel-padding-inline);
 		}
 	}
 
+	.MuiListItemButton-root {
+		padding-inline: var(--a-panel-padding-inline);
+	}
+
 	.MuiCollapse-root > .MuiCollapse-wrapper > .MuiCollapse-wrapperInner > .MuiStack-root {
+
+		&:not(:where(.MuiCollapse-root .MuiCollapse-root)) {
+			padding-block: var(--a-panel-padding-block);
+			padding-inline: var(--a-panel-padding-inline);
+		}
 
 		*:not(:has(> label,> .MuiButtonBase-root)) {
 			row-gap: var(--a-panel-row-gap);
@@ -26,7 +39,7 @@
 		}
 	}
 
-	div:empty {
+	div:empty:not(.MuiCardMedia-root) {
 		position: absolute;
 		left: -1vw;
 		top: -1vh;
