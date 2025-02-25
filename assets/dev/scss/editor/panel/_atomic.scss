@@ -1,19 +1,25 @@
-.a-panel-main {
+:root {
 	--a-panel-base-unit: 8px;
 	--a-panel-spacing: calc(2 * var(--a-panel-base-unit));
+}
 
-	* {
-		--a-panel-padding-block: var(--a-panel-spacing);
-		--a-panel-padding-inline: var(--a-panel-spacing);
-		--a-panel-row-gap: var(--a-panel-spacing);
-		--a-panel-column-gap: var(--a-panel-spacing);
-	}
+:where(.MuiPopover-root *) {
+	--a-panel-popover-spacing: calc(1.5 * var(--a-panel-base-unit));
+	--a-panel-spacing: var(--a-panel-popover-spacing);
+}
+
+:where(.a-panel-main * ) {
+	--a-panel-padding-block: var(--a-panel-spacing);
+	--a-panel-padding-inline: var(--a-panel-spacing);
+	--a-panel-row-gap: var(--a-panel-spacing);
+	--a-panel-column-gap: var(--a-panel-spacing);
+}
+
+.a-panel-main {
 
 	.MuiPopover-root {
-		--a-panel-popover-spacing: calc(1.5 * var(--a-panel-base-unit));
-		--a-panel-spacing: var(--a-panel-popover-spacing);
 
-		&:not(:has(.MuiTag-root)) > *:not(:has(.MuiTabPanel-root)),
+		&:not(.MuiTag-root + .MuiPopover-root) > *:not(:has(.MuiTabPanel-root)),
 		.MuiTabPanel-root {
 			padding-block: var(--a-panel-padding-block);
 			padding-inline: var(--a-panel-padding-inline);
