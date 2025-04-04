@@ -1111,6 +1111,44 @@ class Test_Styles_Renderer extends Elementor_Test_Base {
 		$this->assertMatchesSnapshot( $css );
 	}
 
+	public function test_render__style_with_transform_transformers() {
+		// Arrange.
+		$styles = [
+			[
+				'id' => 'test-transform',
+				'type' => 'class',
+				'variants' => [
+					[
+						'props' => [
+							'transform' => [
+								'$$type' => 'transform',
+								'value' => [
+									'translate-x' => [
+										'$$type' => 'size',
+										'value' => [
+											'size' => 20,
+											'unit' => 'px',
+										],
+									],
+								],
+							],
+						],
+						'meta' => [],
+					],
+				],
+			],
+		];
+
+		$stylesRenderer = Styles_Renderer::make( [], '' );
+
+		// Act.
+		$css = $stylesRenderer->render( $styles );
+
+		// Assert.
+		$this->assertNotEmpty( $css, 'CSS should not be empty' );
+		$this->assertMatchesSnapshot( $css );
+	}
+
 	private function mock_images() {
 		return [
 			'thumbnail' => [
