@@ -14,6 +14,6 @@ class Transform_Transformer extends Transformer_Base {
 	public function transform( $value, Props_Resolver_Context $context ): string {
 		$translate_x = $value['translate-x'] ?? '0px';
 
-		return 'translateX(' . $translate_x . ');';
+		return 'translateX(' . $translate_x . ')';
 	}
 }

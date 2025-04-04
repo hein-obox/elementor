@@ -1,1 +1,1 @@
-.test-transform{transform:translateX(20px);;}
+.test-transform{transform:translateX(20px);}
