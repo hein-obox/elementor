@@ -12,8 +12,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Transform_Transformer extends Transformer_Base {
 
 	public function transform( $value, Props_Resolver_Context $context ): string {
-		$translate_x = $value['translate-x'] ?? '0px';
+		if ( empty( $value ) ) {
+			return '';
+		}
 
-		return 'translateX(' . $translate_x . ')';
+		$styles = [];
+
+		if ( ! empty( $value['translate-x'] ) ) {
+			$styles[] .= 'translateX(' . $value['translate-x'] . ')';
+		}
+
+		if ( ! empty( $value['translate-y'] ) ) {
+			$styles[] .= 'translateY(' . $value['translate-y'] . ')';
+		}
+
+		return implode( ' ', $styles );
 	}
 }

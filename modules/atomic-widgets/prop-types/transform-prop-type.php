@@ -16,6 +16,7 @@ class Transform_Prop_Type extends Object_Prop_Type {
 	protected function define_shape(): array {
 		return [
 			'translate-x' => Size_Prop_Type::make(),
+			'translate-y' => Size_Prop_Type::make(),
 		];
 	}
 }
