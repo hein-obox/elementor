@@ -12,10 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Transform_Transformer extends Transformer_Base {
 
 	public function transform( $value, Props_Resolver_Context $context ): string {
-		if ( empty( $value ) ) {
-			return '';
-		}
-
 		$transform_styles = [];
 
 		if ( ! empty( $value['translate-x'] ) ) {
@@ -24,6 +20,10 @@ class Transform_Transformer extends Transformer_Base {
 
 		if ( ! empty( $value['translate-y'] ) ) {
 			$transform_styles[] = 'translateY(' . $value['translate-y'] . ')';
+		}
+
+		if ( empty( $transform_styles ) ) {
+			return '';
 		}
 
 		return implode( ' ', $transform_styles );
