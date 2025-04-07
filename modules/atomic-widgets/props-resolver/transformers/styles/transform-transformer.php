@@ -16,16 +16,16 @@ class Transform_Transformer extends Transformer_Base {
 			return '';
 		}
 
-		$styles = [];
+		$transform_styles = [];
 
 		if ( ! empty( $value['translate-x'] ) ) {
-			$styles[] = 'translateX(' . $value['translate-x'] . ')';
+			$transform_styles[] = 'translateX(' . $value['translate-x'] . ')';
 		}
 
 		if ( ! empty( $value['translate-y'] ) ) {
-			$styles[] = 'translateY(' . $value['translate-y'] . ')';
+			$transform_styles[] = 'translateY(' . $value['translate-y'] . ')';
 		}
 
-		return implode( ' ', $styles );
+		return implode( ' ', $transform_styles );
 	}
 }
