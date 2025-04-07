@@ -19,11 +19,11 @@ class Transform_Transformer extends Transformer_Base {
 		$styles = [];
 
 		if ( ! empty( $value['translate-x'] ) ) {
-			$styles[] .= 'translateX(' . $value['translate-x'] . ')';
+			$styles[] = 'translateX(' . $value['translate-x'] . ')';
 		}
 
 		if ( ! empty( $value['translate-y'] ) ) {
-			$styles[] .= 'translateY(' . $value['translate-y'] . ')';
+			$styles[] = 'translateY(' . $value['translate-y'] . ')';
 		}
 
 		return implode( ' ', $styles );
